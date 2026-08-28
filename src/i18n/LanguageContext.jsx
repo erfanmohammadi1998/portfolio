@@ -10,6 +10,7 @@ export function LanguageProvider({ children }) {
   const dict = translations[lang]
 
   const value = useMemo(() => {
+    // t('a.b.c') — walk the translation tree; returns the path back if missing.
     function t(path) {
       const parts = path.split('.')
       let node = dict
@@ -18,14 +19,16 @@ export function LanguageProvider({ children }) {
       }
       return node ?? path
     }
-    return { lang, dir: dict.dir, t }
+    // tx({ fa, en, de }) — pick the localized value from a data-file object.
+    function tx(obj) {
+      if (obj == null) return ''
+      if (typeof obj === 'string') return obj
+      return obj[lang] ?? obj.en ?? obj.fa ?? ''
+    }
+    return { lang, dir: dict.dir, t, tx }
   }, [lang, dict])
 
-  return (
-    <LanguageContext.Provider value={value}>
-      {children}
-    </LanguageContext.Provider>
-  )
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
 }
 
 export function useLanguage() {
