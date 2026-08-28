@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
+import { useConsole } from './ApiConsole'
 import LanguageSwitcher from './LanguageSwitcher'
 
 const links = [
-  { key: 'home', to: '' },
   { key: 'about', to: 'about' },
   { key: 'projects', to: 'projects' },
   { key: 'skills', to: 'skills' },
@@ -14,6 +14,7 @@ const links = [
 
 export default function Navbar() {
   const { lang, t } = useLanguage()
+  const { toggleConsole } = useConsole()
   const [open, setOpen] = useState(false)
 
   return (
@@ -27,8 +28,7 @@ export default function Navbar() {
           {links.map((l) => (
             <li key={l.key}>
               <NavLink
-                to={`/${lang}${l.to ? `/${l.to}` : ''}`}
-                end={l.to === ''}
+                to={`/${lang}/${l.to}`}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) => (isActive ? 'active' : '')}
               >
@@ -39,10 +39,22 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-right">
+          <button
+            type="button"
+            className="nav-console"
+            onClick={() => {
+              setOpen(false)
+              toggleConsole()
+            }}
+            aria-label={t('console.title')}
+          >
+            <span aria-hidden="true">{'>_'}</span>
+            <span className="nav-console-kbd">⌘K</span>
+          </button>
           <LanguageSwitcher />
           <button
             className="nav-toggle"
-            aria-label="Toggle menu"
+            aria-label="menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
