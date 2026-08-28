@@ -1,64 +1,73 @@
-import { useLang } from '../context/LanguageContext.jsx';
-
-const CONTACT_LINKS = [
-  {
-    label: 'Email',
-    href: 'mailto:erfan.mohammadi.alv77@gmail.com',
-    value: 'erfan.mohammadi.alv77@gmail.com',
-  },
-  {
-    label: 'GitHub',
-    href: 'https://github.com/Erfan-Mohammadi77',
-    value: 'github.com/Erfan-Mohammadi77',
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/erfan-mohammadi77/',
-    value: 'linkedin.com/in/erfan-mohammadi77',
-  },
-  {
-    label: 'Website',
-    href: 'https://erfanmohammadi.ir',
-    value: 'erfanmohammadi.ir',
-  },
-];
+import { useState } from 'react'
+import { useLanguage } from '../i18n/LanguageContext'
+import { profile } from '../data/profile'
 
 export default function Contact() {
-  const { t } = useLang();
+  const { t, tx } = useLanguage()
+  const L = t('contact.labels')
+  const [copied, setCopied] = useState(null)
+
+  const rows = [
+    { key: 'email', label: L.email, value: profile.email, href: `mailto:${profile.email}`, copy: profile.email },
+    { key: 'phone', label: L.phone, value: profile.phoneDisplay, href: `tel:${profile.phone}`, copy: profile.phone, ltr: true },
+    { key: 'location', label: L.location, value: tx(profile.location) },
+    { key: 'github', label: L.github, value: 'github.com/erfanmohammadi1998', href: profile.links.github },
+    { key: 'linkedin', label: L.linkedin, value: 'linkedin.com/in/erfan-mohammadi77', href: profile.links.linkedin },
+    { key: 'website', label: L.website, value: 'erfanmohammadi.ir', href: profile.links.website },
+  ]
+
+  async function copy(key, text) {
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopied(key)
+      setTimeout(() => setCopied((c) => (c === key ? null : c)), 1600)
+    } catch {
+      /* clipboard unavailable — ignore */
+    }
+  }
 
   return (
-    <section id="contact">
-      <div className="eyebrow">
-        {t.contact.eyebrow}
+    <section className="container section">
+      <div className="section-head">
+        <span className="section-tag">// {t('contact.title')}</span>
+        <h2>{t('contact.title')}</h2>
+        <p>{t('contact.subtitle')}</p>
       </div>
 
-      <h2 className="section-title">
-        {t.contact.title}
-      </h2>
-
-      <div className="terminal">
-        <div className="tbar">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div className="response">
+        <div className="response-bar">
+          <span className="response-status">{t('contact.responseTag')}</span>
+          <span className="response-path" dir="ltr">GET /contact</span>
         </div>
 
-        <div className="contact-links">
-          {CONTACT_LINKS.map((link) => (
-            <div key={link.label}>
-              <strong>{link.label}: </strong>
-
-              {link.href ? (
-                <a href={link.href} target="_blank" rel="noreferrer">
-                  {link.value}
-                </a>
-              ) : (
-                <span>{link.value}</span>
-              )}
+        <dl className="response-body">
+          {rows.map((r) => (
+            <div className="response-row" key={r.key}>
+              <dt>{r.label}</dt>
+              <dd dir={r.ltr ? 'ltr' : undefined}>
+                {r.href ? (
+                  <a href={r.href} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+                    {r.value}
+                  </a>
+                ) : (
+                  <span>{r.value}</span>
+                )}
+                {r.copy && (
+                  <button type="button" className="response-copy" onClick={() => copy(r.key, r.copy)}>
+                    {copied === r.key ? t('contact.copied') : t('contact.copy')}
+                  </button>
+                )}
+              </dd>
             </div>
           ))}
+        </dl>
+
+        <div className="response-foot">
+          <a className="btn btn-primary" href={`mailto:${profile.email}`}>
+            {t('contact.cta')} →
+          </a>
         </div>
       </div>
     </section>
-  );
+  )
 }

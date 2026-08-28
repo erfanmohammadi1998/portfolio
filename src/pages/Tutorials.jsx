@@ -8,15 +8,13 @@ export default function Tutorials() {
   return (
     <section className="container section">
       <div className="section-head">
+        <span className="section-tag">// {t('tutorials.title')}</span>
         <h2>{t('tutorials.title')}</h2>
         <p>{t('tutorials.subtitle')}</p>
       </div>
 
       {tutorials.length === 0 ? (
-        <EmptyState
-          title={t('tutorials.emptyTitle')}
-          body={t('tutorials.emptyBody')}
-        />
+        <EmptyState title={t('tutorials.emptyTitle')} body={t('tutorials.emptyBody')} />
       ) : (
         <div className="grid">
           {tutorials.map((post) => (

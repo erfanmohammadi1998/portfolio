@@ -6,12 +6,17 @@ export default function NotFound() {
 
   return (
     <div className="container not-found">
-      <h1>404</h1>
-      <p style={{ color: 'var(--text-muted)', marginBottom: 24 }}>
-        {t('notFound.body')}
-      </p>
+      <pre className="nf-json">
+{`{
+  "status": 404,
+  "error": "route not defined"
+}`}
+      </pre>
+      <h1>{t('notFound.code')}</h1>
+      <p>{t('notFound.title')}</p>
+      <p className="nf-body">{t('notFound.body')}</p>
       <Link className="btn btn-primary" to={`/${lang}`}>
-        {t('notFound.back')}
+        {t('notFound.back')} →
       </Link>
     </div>
   )
