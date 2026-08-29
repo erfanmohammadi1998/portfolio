@@ -7,6 +7,7 @@ import Reveal from '../components/Reveal'
 import Magnetic from '../components/Magnetic'
 import { stats } from '../data/stats'
 import { stack } from '../data/stack'
+import { services } from '../data/services'
 import { projects } from '../data/projects'
 
 const marqueeItems = ['Python', 'Django', 'DRF', 'React', 'SQL Server', 'PostgreSQL', 'Docker', 'REST', 'Git', 'Linux']
@@ -94,6 +95,21 @@ export default function Home() {
       </Reveal>
 
       <Reveal as="section" className="container section">
+        <span className="section-tag">{t('services.tag')}</span>
+        <div className="section-head">
+          <h2 dir="auto">{t('services.title')}</h2>
+        </div>
+        <div className="svc-grid">
+          {services.map((s) => (
+            <div className="svc-card" key={s.key}>
+              <h3 dir="auto">{tx(s.title)}</h3>
+              <p dir="auto">{tx(s.body)}</p>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+
+      <Reveal as="section" className="container section">
         <span className="section-tag">{t('featured.tag')}</span>
         <div className="section-head">
           <h2 dir="auto">{t('featured.title')}</h2>
@@ -103,7 +119,7 @@ export default function Home() {
             <Link className="feat-card" key={p.slug} to={`/${lang}/projects`}>
               <div className="feat-card-top">
                 <span className="feat-kind">{tx(p.kind)}</span>
-                <span className="feat-year">{p.year}</span>
+                <span className="feat-year">{p.private ? '🔒 ' : ''}{p.year}</span>
               </div>
               <h3 dir="auto">{tx(p.title)}</h3>
               <p dir="auto">{tx(p.tagline)}</p>

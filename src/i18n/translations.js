@@ -64,6 +64,7 @@ export const translations = {
         'GET /projects': 'فهرست نمونه‌کارها',
         'GET /projects/:slug': 'جزئیات یک پروژه',
         'GET /skills': 'مهارت‌ها بر اساس حوزه',
+        'GET /services': 'حوزه‌های کاری',
         'POST /contact': 'راه‌های تماس',
         whoami: 'معرفی یک‌خطی',
         open: 'باز کردن یک مسیر؛ مثلاً open /projects',
@@ -88,6 +89,11 @@ export const translations = {
       tag: 'منتخب کارها',
       title: 'چند پروژه که ارزش توضیح دارند.',
       all: 'دیدن همه‌ی نمونه‌کارها',
+    },
+
+    services: {
+      tag: 'چه کاری انجام می‌دهم',
+      title: 'حوزه‌هایی که در آن‌ها کار تحویل داده‌ام.',
     },
 
     about: {
@@ -132,7 +138,7 @@ export const translations = {
 
     projects: {
       title: 'نمونه‌کارها',
-      subtitle: 'منتخبی از پروژه‌های اجراشده و در حال توسعه.',
+      subtitle: 'منتخبی از پروژه‌های اجراشده — عمومی و خصوصی.',
       labels: {
         problem: 'مسئله',
         approach: 'راهکار',
@@ -140,6 +146,8 @@ export const translations = {
         stack: 'فناوری‌ها',
         code: 'کد روی گیت‌هاب',
         demo: 'نسخه‌ی زنده',
+        private: 'مخزن خصوصی',
+        privateNote: 'کد این پروژه خصوصی است؛ جزئیات بیشتر بر اساس درخواست.',
       },
       emptyTitle: 'نمونه‌کاری ثبت نشده',
       emptyBody: 'به‌زودی.',
@@ -264,6 +272,7 @@ export const translations = {
         'GET /projects': 'list the projects',
         'GET /projects/:slug': 'one project in detail',
         'GET /skills': 'skills by area',
+        'GET /services': 'capability areas',
         'POST /contact': 'ways to reach me',
         whoami: 'one-line intro',
         open: 'open a route — e.g. open /projects',
@@ -288,6 +297,11 @@ export const translations = {
       tag: 'Selected work',
       title: 'A few projects worth explaining.',
       all: 'See all projects',
+    },
+
+    services: {
+      tag: 'What I do',
+      title: 'Areas I have shipped work in.',
     },
 
     about: {
@@ -332,7 +346,7 @@ export const translations = {
 
     projects: {
       title: 'Projects',
-      subtitle: 'A selection of completed and in-progress work.',
+      subtitle: 'A selection of completed work — public and private.',
       labels: {
         problem: 'Problem',
         approach: 'Approach',
@@ -340,6 +354,8 @@ export const translations = {
         stack: 'Stack',
         code: 'Code on GitHub',
         demo: 'Live version',
+        private: 'Private repository',
+        privateNote: 'The code for this project is private; more detail on request.',
       },
       emptyTitle: 'No projects listed',
       emptyBody: 'Coming soon.',
@@ -464,6 +480,7 @@ export const translations = {
         'GET /projects': 'Projekte auflisten',
         'GET /projects/:slug': 'ein Projekt im Detail',
         'GET /skills': 'Fähigkeiten nach Bereich',
+        'GET /services': 'Kompetenzbereiche',
         'POST /contact': 'Kontaktmöglichkeiten',
         whoami: 'Kurzvorstellung',
         open: 'eine Route öffnen — z. B. open /projects',
@@ -488,6 +505,11 @@ export const translations = {
       tag: 'Ausgewählte Arbeiten',
       title: 'Ein paar Projekte, die eine Erklärung wert sind.',
       all: 'Alle Projekte ansehen',
+    },
+
+    services: {
+      tag: 'Was ich mache',
+      title: 'Bereiche, in denen ich Arbeit ausgeliefert habe.',
     },
 
     about: {
@@ -532,7 +554,7 @@ export const translations = {
 
     projects: {
       title: 'Projekte',
-      subtitle: 'Eine Auswahl abgeschlossener und laufender Arbeiten.',
+      subtitle: 'Eine Auswahl abgeschlossener Arbeiten — öffentlich und privat.',
       labels: {
         problem: 'Problem',
         approach: 'Ansatz',
@@ -540,6 +562,8 @@ export const translations = {
         stack: 'Stack',
         code: 'Code auf GitHub',
         demo: 'Live-Version',
+        private: 'Privates Repository',
+        privateNote: 'Der Code dieses Projekts ist privat; mehr Details auf Anfrage.',
       },
       emptyTitle: 'Keine Projekte gelistet',
       emptyBody: 'Demnächst.',
