@@ -1,20 +1,23 @@
 :root {
-  --bg: #0b0e13;
-  --bg-2: #0e121a;
-  --surface: #12171f;
-  --surface-2: #161c26;
-  --surface-hover: #1b2230;
-  --border: #232b37;
-  --border-lit: #3b4a5e;
-  --text: #e7eaf0;
-  --text-muted: #8b93a2;
-  --text-dim: #5f6875;
+  --bg: #0a0b16;
+  --bg-2: #0e1020;
+  --surface: #141527;
+  --surface-2: #1a1c32;
+  --surface-hover: #20233d;
+  --border: #262a44;
+  --border-lit: #414a70;
+  --text: #edeef7;
+  --text-muted: #969bb5;
+  --text-dim: #626790;
 
-  --accent: #64d2ff;
-  --accent-2: #7c88ff;
-  --accent-soft: rgba(100, 210, 255, 0.12);
-  --ok: #46d39a;
-  --warn: #f5a97f;
+  --accent: #62d6ff;
+  --accent-2: #a690ff;
+  --accent-3: #ff7bc5;
+  --accent-soft: rgba(98, 214, 255, 0.13);
+  --accent-2-soft: rgba(166, 144, 255, 0.14);
+  --grad: linear-gradient(120deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
+  --ok: #4be0a4;
+  --warn: #ffb27a;
 
   --font-body: 'Vazirmatn', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
@@ -32,8 +35,12 @@ html { scroll-behavior: smooth; }
 body {
   background-color: var(--bg);
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.035) 1px, transparent 0);
-  background-size: 32px 32px;
+    radial-gradient(60vw 50vh at 12% -5%, rgba(166, 144, 255, 0.1), transparent 60%),
+    radial-gradient(55vw 45vh at 100% 0%, rgba(98, 214, 255, 0.09), transparent 55%),
+    radial-gradient(50vw 40vh at 50% 100%, rgba(255, 123, 197, 0.06), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: auto, auto, auto, 32px 32px;
+  background-attachment: fixed, fixed, fixed, scroll;
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.7;
@@ -225,14 +232,17 @@ button:focus-visible {
 }
 .hero-glow {
   position: absolute;
-  inset-block-start: -220px;
-  inset-inline-end: -160px;
-  width: 620px;
-  height: 620px;
+  inset-block-start: -260px;
+  inset-inline-end: -200px;
+  width: 720px;
+  height: 720px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--accent) 0%, var(--accent-2) 42%, transparent 70%);
-  opacity: 0.12;
-  filter: blur(70px);
+  background:
+    radial-gradient(circle at 30% 30%, var(--accent-3) 0%, transparent 45%),
+    radial-gradient(circle at 70% 40%, var(--accent) 0%, transparent 50%),
+    radial-gradient(circle at 50% 75%, var(--accent-2) 0%, transparent 55%);
+  opacity: 0.22;
+  filter: blur(80px);
   pointer-events: none;
   animation: drift 16s ease-in-out infinite alternate;
 }
@@ -1409,6 +1419,15 @@ button:focus-visible {
 body.has-custom-cursor { cursor: none; }
 body.has-custom-cursor a,
 body.has-custom-cursor button { cursor: none; }
+.cursor-trail {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9997;
+  mix-blend-mode: screen;
+}
 .cursor-dot, .cursor-ring {
   position: fixed;
   top: 0;
@@ -1418,16 +1437,16 @@ body.has-custom-cursor button { cursor: none; }
   border-radius: 50%;
   will-change: transform;
 }
-.cursor-dot { width: 6px; height: 6px; background: var(--accent); }
+.cursor-dot { width: 6px; height: 6px; background: #fff; box-shadow: 0 0 8px var(--accent); }
 .cursor-ring {
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--accent);
-  transition: width 0.2s, height 0.2s, background 0.2s;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--accent);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
 }
-.cursor-ring.cursor-hover { width: 56px; height: 56px; background: var(--accent-soft); }
+.cursor-ring.cursor-hover { width: 54px; height: 54px; border-color: var(--accent-2); }
 @media (pointer: coarse) {
-  .cursor-dot, .cursor-ring { display: none; }
+  .cursor-dot, .cursor-ring, .cursor-trail { display: none; }
 }
 
 /* ============ Misc motion ============ */
@@ -1459,7 +1478,7 @@ body.has-custom-cursor button { cursor: none; }
   .reveal { opacity: 1; transform: none; }
   .hero-glow { display: none; }
   body.has-custom-cursor { cursor: auto; }
-  .cursor-dot, .cursor-ring { display: none; }
+  .cursor-dot, .cursor-ring, .cursor-trail { display: none; }
 }
 
 /* ============ Boot overlay ============ */
@@ -1569,6 +1588,55 @@ body.has-custom-cursor button { cursor: none; }
   .resume-sec p, .resume-entry li, .resume-courses li, .resume-doc-contact,
   .resume-doc-contact a, .resume-entry-head span { color: #333; }
   .page-transition { animation: none; }
+}
+
+/* ============ Colour accents ============ */
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .section-tag,
+  .hero .role {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.nav-brand-mark {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    var(--grad) border-box;
+  color: var(--accent);
+}
+.btn-primary {
+  background: var(--grad);
+  color: #0a0b16;
+  background-size: 160% 160%;
+  transition: background-position 0.4s ease, transform 0.15s ease;
+}
+.btn-primary:hover { background-position: 100% 0; transform: translateY(-1px); }
+.eyebrow {
+  background: var(--accent-2-soft);
+  border: 1px solid var(--border-lit);
+}
+.map-head h2 .accent,
+.hero h1 .accent { color: var(--accent-2); }
+
+.kv-card { border-inline-start-color: var(--accent-2); }
+.svc-card { border-block-start: 2px solid transparent; background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    var(--grad) border-box; }
+.proj-cover-box.is-out { stroke: var(--accent-2); }
+.feat-card:hover { border-color: var(--accent-2); }
+.timeline-item::before { background: var(--grad); }
+.about-now { border-inline-start-color: var(--accent-2); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-glow { animation: heroHue 22s ease-in-out infinite alternate, drift 16s ease-in-out infinite alternate; }
+}
+@keyframes heroHue {
+  from { filter: blur(80px) hue-rotate(0deg); }
+  to { filter: blur(80px) hue-rotate(40deg); }
 }
 
 /* ============ Bidi: mixed Persian/Latin prose ============ */
