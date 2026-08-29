@@ -12,7 +12,7 @@ export default function About() {
     { k: L.name, v: tx(profile.name) },
     { k: L.role, v: tx(profile.role) },
     { k: L.location, v: tx(profile.location) },
-    { k: L.email, v: profile.email, href: `mailto:${profile.email}` },
+    { k: L.email, v: profile.email, href: `mailto:${profile.email}`, ltr: true },
     { k: L.phone, v: profile.phoneDisplay, href: `tel:${profile.phone}`, ltr: true },
     { k: L.availability, v: tx(profile.availability) },
   ]
@@ -21,8 +21,8 @@ export default function About() {
     <section className="container section about">
       <div className="section-head">
         <span className="section-tag">// {t('about.title')}</span>
-        <h2>{t('about.title')}</h2>
-        <p>{t('about.subtitle')}</p>
+        <h2 dir="auto">{t('about.title')}</h2>
+        <p dir="auto">{t('about.subtitle')}</p>
       </div>
 
       <div className="about-grid">
@@ -32,8 +32,12 @@ export default function About() {
           </figure>
           <div className="about-body">
             {paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
+              <p key={i} dir="auto">{p}</p>
             ))}
+            <p className="about-now" dir="auto">
+              <span className="about-now-tag">{t('about.nowTag')}</span>
+              {t('about.now')}
+            </p>
           </div>
         </div>
 
@@ -42,13 +46,9 @@ export default function About() {
           <dl className="detail-list">
             {details.map((d) => (
               <div key={d.k}>
-                <dt>{d.k}</dt>
-                <dd dir={d.ltr ? 'ltr' : undefined}>
-                  {d.href ? (
-                    <a href={d.href}>{d.v}</a>
-                  ) : (
-                    d.v
-                  )}
+                <dt dir="auto">{d.k}</dt>
+                <dd dir={d.ltr ? 'ltr' : 'auto'}>
+                  {d.href ? <a href={d.href}>{d.v}</a> : d.v}
                 </dd>
               </div>
             ))}
@@ -66,8 +66,8 @@ export default function About() {
           {timeline.map((item, i) => (
             <Reveal as="li" key={i} delay={i * 90} className="timeline-item">
               <span className="timeline-time">{item.time}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
+              <h3 dir="auto">{item.title}</h3>
+              <p dir="auto">{item.body}</p>
             </Reveal>
           ))}
         </ol>

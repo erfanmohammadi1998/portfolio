@@ -14,8 +14,8 @@ export default function Skills() {
     <section className="container section">
       <div className="section-head">
         <span className="section-tag">// {t('skills.title')}</span>
-        <h2>{t('skills.title')}</h2>
-        <p>{t('skills.subtitle')}</p>
+        <h2 dir="auto">{t('skills.title')}</h2>
+        <p dir="auto">{t('skills.subtitle')}</p>
       </div>
 
       {skills.length === 0 ? (
@@ -49,9 +49,9 @@ export default function Skills() {
                   <span className="skill-icon">
                     <SkillIcon name={group.key} />
                   </span>
-                  <h3>{t(`skills.categories.${group.key}.title`)}</h3>
+                  <h3 dir="auto">{t(`skills.categories.${group.key}.title`)}</h3>
                 </div>
-                <p className="skill-desc">{t(`skills.categories.${group.key}.description`)}</p>
+                <p className="skill-desc" dir="auto">{t(`skills.categories.${group.key}.description`)}</p>
                 <div className="stack-list">
                   {group.items.map((item) => (
                     <span className="stack-chip sm" key={item}>{item}</span>

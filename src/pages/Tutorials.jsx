@@ -9,8 +9,8 @@ export default function Tutorials() {
     <section className="container section">
       <div className="section-head">
         <span className="section-tag">// {t('tutorials.title')}</span>
-        <h2>{t('tutorials.title')}</h2>
-        <p>{t('tutorials.subtitle')}</p>
+        <h2 dir="auto">{t('tutorials.title')}</h2>
+        <p dir="auto">{t('tutorials.subtitle')}</p>
       </div>
 
       {tutorials.length === 0 ? (
