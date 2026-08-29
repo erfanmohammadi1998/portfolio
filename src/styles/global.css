@@ -211,7 +211,17 @@ button:focus-visible {
 .hero {
   position: relative;
   overflow: clip;
-  padding-block: 72px 40px;
+  padding-block: 72px 56px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+.hero-visual { min-width: 0; }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 .hero-glow {
   position: absolute;
@@ -417,6 +427,84 @@ button:focus-visible {
 }
 
 .map-console-btn { margin-block-start: 16px; }
+
+/* ============ Hero code panel ============ */
+
+.code-panel {
+  border: 1px solid var(--border-lit);
+  border-radius: var(--radius-lg);
+  background: var(--bg-2);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6);
+  font-family: var(--font-mono);
+}
+.code-panel-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border-block-end: 1px solid var(--border);
+  background: var(--surface);
+}
+.code-panel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-lit);
+}
+.code-panel-dot:first-child { background: #f5836f; }
+.code-panel-dot:nth-child(2) { background: #f5c14e; }
+.code-panel-dot:nth-child(3) { background: #5bd67f; }
+.code-panel-name {
+  margin-inline-start: 8px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+.code-panel-body {
+  display: flex;
+  padding: 16px 0;
+  min-height: 268px;
+  overflow-x: auto;
+}
+.code-panel-gutter {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 14px 12px;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  text-align: right;
+  user-select: none;
+  border-inline-end: 1px solid var(--border);
+}
+.code-panel-code {
+  margin: 0;
+  padding-inline: 16px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--text);
+  white-space: pre;
+  tab-size: 4;
+}
+.code-panel-code .cp-k { color: var(--accent-2); }
+.code-panel-code .cp-s { color: #b9e88f; }
+.code-panel-code .cp-c { color: var(--text-dim); font-style: italic; }
+.code-panel-code .cp-d { color: var(--accent); }
+.code-panel-code .cp-n { color: var(--warn); }
+.code-panel-caret {
+  display: inline-block;
+  width: 7px;
+  height: 1.05em;
+  vertical-align: -3px;
+  margin-inline-start: 1px;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@media (max-width: 480px) {
+  .code-panel-code { font-size: 0.72rem; }
+  .code-panel-body { min-height: 232px; }
+}
 
 /* ============ Marquee ============ */
 
