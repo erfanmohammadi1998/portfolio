@@ -189,13 +189,14 @@ export default function ApiConsole() {
             slug: p.slug,
             title: tx(p.title),
             private: !!p.private,
+            overview: tx(p.overview),
             problem: tx(p.problem),
-            approach: tx(p.approach),
+            features: (p.features || []).map((f) => tx(f)),
             result: tx(p.result),
             stack: p.stack,
             links: p.links,
           },
-          to: 'projects',
+          to: `projects/${p.slug}`,
         })
         return
       }
