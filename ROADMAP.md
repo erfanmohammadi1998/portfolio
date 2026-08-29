@@ -12,6 +12,23 @@ like a JSON endpoint. Deployed to GitHub Pages at https://erfanmohammadi.ir
 via `.github/workflows/deploy.yml` on push to `main`. Languages: fa (default) /
 en / de, RTL-aware.
 
+## Done (2026-08, pass 6)
+
+- CV integrated: `/:lang/resume` print-friendly page (+ nav / hero / About
+  links), About gains Experience / Education / Training sections
+  (`src/data/resume.js`).
+- Formal register across all copy (fa/en/de); casual phrasing and em-dash /
+  "from X to Y" constructions removed.
+- Repositioned: Backend & Database Developer · Software Engineer; the
+  Houshiva studio (houshiva.ir) is now part of the picture.
+- Skills / stats / services rebuilt from the CV (SQL Server, T-SQL, BI,
+  Power BI, SSIS, Crystal/Stimulsoft, Docker, GitLab, …).
+- Two more real projects → nine total (management dashboard & analytics,
+  intelligent document management).
+- Self-typing code panel in the hero.
+- Palette given colour (indigo base + cyan/violet/pink accents, hero mesh,
+  gradient tags/buttons) and a canvas cursor trail.
+
 ## Positioning
 
 **Python Backend Developer · Databases.** Copy leads with backend, API design,
