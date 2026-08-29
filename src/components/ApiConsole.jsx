@@ -300,7 +300,7 @@ export default function ApiConsole() {
         </div>
 
         <form className="console-input" onSubmit={onSubmit}>
-          <span className="console-prompt">{t('console.prompt')} ~ $</span>
+          <span className="console-prompt">{t('console.prompt')} $</span>
           <input
             ref={inputRef}
             value={input}
