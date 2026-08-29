@@ -8,7 +8,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
-import Tutorials from './pages/Tutorials'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import CustomCursor from './components/CustomCursor'
@@ -90,7 +89,6 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="projects" element={<Projects />} />
         <Route path="skills" element={<Skills />} />
-        <Route path="tutorials" element={<Tutorials />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>
