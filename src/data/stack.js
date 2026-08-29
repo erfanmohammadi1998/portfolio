@@ -1,64 +1,32 @@
-export const stack = [
-  // Frontend
-  { name: 'HTML5' },
-  { name: 'CSS3' },
-  { name: 'JavaScript' },
-  { name: 'TypeScript' },
-  { name: 'React' },
-  { name: 'Next.js' },
-  { name: 'Tailwind CSS' },
-  { name: 'Bootstrap' },
-  { name: 'Vite' },
+// The technology chips on the home page. Curated and honest — the tools that
+// actually show up in the work, weighted toward the backend.
 
-  // Backend
+export const stack = [
+  // Language & backend
   { name: 'Python' },
   { name: 'Django' },
   { name: 'Django REST Framework' },
   { name: 'FastAPI' },
-  { name: 'Node.js' },
-  { name: 'Express.js' },
+  { name: 'REST API' },
+  { name: 'JWT' },
+  { name: 'OpenAPI' },
 
   // Databases
+  { name: 'SQL Server' },
+  { name: 'T-SQL' },
   { name: 'PostgreSQL' },
   { name: 'MySQL' },
   { name: 'SQLite' },
-  { name: 'Redis' },
 
-  // APIs & Protocols
-  { name: 'REST API' },
-  { name: 'GraphQL' },
-  { name: 'WebSocket' },
-  { name: 'JWT' },
+  // Frontend
+  { name: 'JavaScript' },
+  { name: 'React' },
+  { name: 'Vite' },
+  { name: 'Tailwind CSS' },
 
-  // DevOps
+  // Tooling & infra
   { name: 'Git' },
-  { name: 'GitHub' },
-  { name: 'Docker' },
-  { name: 'Docker Compose' },
-  { name: 'Nginx' },
-  { name: 'Linux' },
   { name: 'GitHub Actions' },
-
-  // Background Tasks
-  { name: 'Celery' },
-  { name: 'RabbitMQ' },
-
-  // AI
-  { name: 'OpenAI API' },
-  { name: 'Google Gemini API' },
-  { name: 'Ollama' },
-  { name: 'LangChain' },
-  { name: 'Vector Databases' },
-  { name: 'RAG' },
-  { name: 'AI Automation' },
-
-  // Testing
-  { name: 'Pytest' },
-  { name: 'Postman' },
-
-  // Architecture
-  { name: 'Clean Architecture' },
-  { name: 'Microservices' },
-  { name: 'MVC' },
-  { name: 'CI/CD' },
-];
+  { name: 'Docker' },
+  { name: 'Linux' },
+]
