@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-col">
-          <span className="footer-brand">erfan<span>.dev</span></span>
+          <span className="footer-brand">{t('brand')}</span>
           <span>{t('footer.rights')}</span>
         </div>
         <div className="footer-links">
