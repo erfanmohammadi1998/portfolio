@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useConsole } from '../components/ApiConsole'
 import SystemMap from '../components/SystemMap'
+import ProjectCover, { LockGlyph } from '../components/ProjectCover'
 import Marquee from '../components/Marquee'
 import Reveal from '../components/Reveal'
 import Magnetic from '../components/Magnetic'
@@ -42,8 +43,6 @@ export default function Home() {
               </Magnetic>
             </div>
             <p className="hero-meta" dir="ltr">
-              <span>response&nbsp;&lt;&nbsp;24h</span>
-              <span className="hero-meta-sep">·</span>
               <span>Tehran · UTC+3:30</span>
               <span className="hero-meta-sep">·</span>
               <button type="button" className="hero-meta-btn" onClick={openConsole}>
@@ -117,16 +116,18 @@ export default function Home() {
         <div className="feat-grid">
           {featured.map((p) => (
             <Link className="feat-card" key={p.slug} to={`/${lang}/projects`}>
-              <div className="feat-card-top">
-                <span className="feat-kind">{tx(p.kind)}</span>
-                <span className="feat-year">{p.private ? '🔒 ' : ''}{p.year}</span>
-              </div>
-              <h3 dir="auto">{tx(p.title)}</h3>
-              <p dir="auto">{tx(p.tagline)}</p>
-              <div className="stack-list">
-                {p.stack.slice(0, 4).map((s) => (
-                  <span className="stack-chip sm" key={s}>{s}</span>
-                ))}
+              <ProjectCover arch={p.arch} seed={p.slug} />
+              <div className="feat-card-body">
+                <h3 dir="auto">
+                  {tx(p.title)}
+                  {p.private && <span className="feat-lock" aria-label={t('projects.labels.private')}><LockGlyph /></span>}
+                </h3>
+                <p dir="auto">{tx(p.tagline)}</p>
+                <div className="stack-list">
+                  {p.stack.slice(0, 4).map((s) => (
+                    <span className="stack-chip sm" key={s}>{s}</span>
+                  ))}
+                </div>
               </div>
             </Link>
           ))}
