@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { useConsole } from '../components/ApiConsole'
 import SystemMap from '../components/SystemMap'
 import ProjectCover, { LockGlyph } from '../components/ProjectCover'
+import CodePanel from '../components/CodePanel'
 import Marquee from '../components/Marquee'
 import Reveal from '../components/Reveal'
 import Magnetic from '../components/Magnetic'
@@ -22,7 +23,7 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-glow" aria-hidden="true" />
-        <div className="container">
+        <div className="container hero-grid">
           <div className="hero-copy fade-up">
             <span className="eyebrow">
               <span className="eyebrow-dot" aria-hidden="true" /> {t('hero.status')}
@@ -51,21 +52,27 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="map-block fade-up" style={{ animationDelay: '120ms' }}>
-            <div className="map-head">
-              <span className="section-tag">{t('map.tag')}</span>
-              <h2 dir="auto">{t('map.title')}</h2>
-              <p className="map-hint" dir="auto">{t('map.hint')}</p>
-            </div>
-            <SystemMap />
-            <button type="button" className="btn btn-ghost btn-sm map-console-btn" onClick={openConsole}>
-              <span aria-hidden="true">{'>_'}</span> {t('map.openConsole')}
-            </button>
+          <div className="hero-visual fade-up" style={{ animationDelay: '140ms' }}>
+            <CodePanel />
           </div>
         </div>
       </section>
 
       <Marquee items={marqueeItems} />
+
+      <Reveal as="section" className="container section">
+        <div className="map-block">
+          <div className="map-head">
+            <span className="section-tag">{t('map.tag')}</span>
+            <h2 dir="auto">{t('map.title')}</h2>
+            <p className="map-hint" dir="auto">{t('map.hint')}</p>
+          </div>
+          <SystemMap />
+          <button type="button" className="btn btn-ghost btn-sm map-console-btn" onClick={openConsole}>
+            <span aria-hidden="true">{'>_'}</span> {t('map.openConsole')}
+          </button>
+        </div>
+      </Reveal>
 
       <Reveal as="section" className="container section">
         <span className="section-tag">{t('intro.tag')}</span>
@@ -115,7 +122,7 @@ export default function Home() {
         </div>
         <div className="feat-grid">
           {featured.map((p) => (
-            <Link className="feat-card" key={p.slug} to={`/${lang}/projects`}>
+            <Link className="feat-card" key={p.slug} to={`/${lang}/projects/${p.slug}`}>
               <ProjectCover arch={p.arch} seed={p.slug} />
               <div className="feat-card-body">
                 <h3 dir="auto">
