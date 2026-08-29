@@ -19,6 +19,16 @@ and databases — not "full-stack architecture". Keep it plain: no library lists
 in prose, no internal table names, no "built from scratch / no template"
 bragging, no self-congratulation.
 
+## Done (2026-08, pass 5)
+
+- Every project now has a full detail page at `/:lang/projects/:slug`
+  (`ProjectDetail.jsx`): overview, problem, "what I built" (multi-para),
+  result, + sidebar with features / stack / role. Projects index is a card
+  grid linking in. Project data expanded with `overview`, `build[]`,
+  `features[]`, `role`.
+- Shorter hero tagline ("I build the backend of enterprise software: APIs,
+  databases, and business logic.").
+
 ## Done (2026-08, pass 4)
 
 - Repositioned to Python backend + databases across fa/en/de (role, hero,
