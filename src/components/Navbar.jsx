@@ -21,7 +21,8 @@ export default function Navbar() {
     <header className="nav">
       <div className="container nav-inner">
         <NavLink to={`/${lang}`} className="nav-brand" onClick={() => setOpen(false)}>
-          erfan<span>.dev</span>
+          <span className="nav-brand-mark" aria-hidden="true">EM</span>
+          <span className="nav-brand-name">{t('brand')}</span>
         </NavLink>
 
         <ul className={`nav-links${open ? ' open' : ''}`}>

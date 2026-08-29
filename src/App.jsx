@@ -13,6 +13,7 @@ import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import CustomCursor from './components/CustomCursor'
 import GrainOverlay from './components/GrainOverlay'
+import Boot from './components/Boot'
 import ApiConsole, { ConsoleProvider, useConsole } from './components/ApiConsole'
 
 function LangGate() {
@@ -33,6 +34,7 @@ function LangLayout() {
   return (
     <>
       <SyncHtmlAttrs />
+      <Boot />
       <CustomCursor />
       <GrainOverlay />
       <Navbar />
