@@ -1,20 +1,20 @@
 // "At a glance" — key/value facts, shown on the home page and returned by
-// GET /whoami in the API console. Keep these honest and low-maintenance.
+// GET /whoami in the API console.
 
 export const stats = [
   {
     key: 'focus',
     label: { fa: 'تمرکز', en: 'Focus', de: 'Fokus' },
     value: {
-      fa: 'بک‌اند و فول‌استک',
-      en: 'Backend & full stack',
-      de: 'Backend & Full Stack',
+      fa: 'بک‌اند و پایگاه داده',
+      en: 'Backend & databases',
+      de: 'Backend & Datenbanken',
     },
   },
   {
     key: 'core',
     label: { fa: 'هسته‌ی استک', en: 'Core stack', de: 'Kern-Stack' },
-    value: { fa: 'Python · Django · React', en: 'Python · Django · React', de: 'Python · Django · React' },
+    value: { fa: 'Python · Django · DRF', en: 'Python · Django · DRF', de: 'Python · Django · DRF' },
   },
   {
     key: 'data',

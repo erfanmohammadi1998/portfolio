@@ -7,7 +7,6 @@ export const translations = {
       about: 'درباره',
       projects: 'نمونه‌کارها',
       skills: 'مهارت‌ها',
-      tutorials: 'یادداشت‌ها',
       contact: 'تماس',
     },
 
@@ -15,18 +14,18 @@ export const translations = {
 
     boot: [
       'راه‌اندازی محیط',
-      'بارگذاری ماژول‌ها: react · router · svg',
+      'بارگذاری ماژول‌ها',
       'اتصال به سرویس پروفایل',
-      'GET /profile — 200 OK',
+      'GET /profile · 200',
       'آماده.',
     ],
 
     hero: {
       status: 'در دسترس برای پروژه و همکاری',
       name: 'عرفان محمدی',
-      role: 'مهندس نرم‌افزار؛ متمرکز بر بک‌اند و معماری فول‌استک',
+      role: 'توسعه‌دهنده‌ی بک‌اند پایتون و پایگاه داده',
       tagline:
-        'سامانه‌های نرم‌افزاری در مقیاس سازمانی طراحی و می‌سازم؛ از مدل داده و API تا رابط کاربری. تمرکزم روی پایداری زیر بار واقعی، معماری تمیز و تحویل قابل‌اتکاست.',
+        'بک‌اند و APIهای سامانه‌های سازمانی را می‌سازم؛ با تمرکز بر طراحی درستِ پایگاه داده، پایداری و کدی که در بلندمدت قابل نگهداری بماند.',
       cta1: 'دیدن نمونه‌کارها',
       cta2: 'تماس',
     },
@@ -37,12 +36,12 @@ export const translations = {
       hint: 'روی هر گره کلیک کنید تا به همان بخش بروید؛ یا کنسول را باز کنید و درخواست بفرستید.',
       openConsole: 'باز کردن کنسول API',
       nodes: {
-        'client': 'نقطه‌ی شروع — معرفی و سابقه',
-        'api-gateway': 'ورودی همه‌ی کارها — نمونه‌کارها',
-        'auth-service': 'مسیر دسترسی — راه‌های تماس',
-        'ticket-service': 'یک سامانه‌ی واقعی — مدیریت تیکت',
-        'ai-service': 'هوش مصنوعی و اتوماسیون — مهارت‌ها',
-        'datastore': 'لایه‌ی داده — پایگاه داده',
+        'client': 'معرفی و سابقه',
+        'api-gateway': 'همه‌ی نمونه‌کارها',
+        'auth-service': 'راه‌های تماس',
+        'ticket-service': 'یک پروژه‌ی واقعی',
+        'ai-service': 'مهارت‌ها و ابزارها',
+        'datastore': 'پایگاه داده',
       },
     },
 
@@ -51,7 +50,7 @@ export const translations = {
       subtitle: 'این پورتفولیو را مثل یک API صدا بزنید.',
       prompt: '~/erfan',
       placeholder: 'یک دستور بنویسید و Enter بزنید؛ مثلاً GET /projects',
-      welcome: 'به کنسول خوش آمدید. برای فهرست دستورها «help» را بزنید.',
+      welcome: 'برای فهرست دستورها «help» را بزنید.',
       close: 'بستن',
       toggleHint: 'Ctrl + K',
       helpTitle: 'دستورهای در دسترس',
@@ -71,14 +70,14 @@ export const translations = {
         clear: 'پاک کردن صفحه',
       },
       whoami:
-        'عرفان محمدی — مهندس نرم‌افزار با تمرکز بر بک‌اند و معماری سیستم؛ سازنده‌ی سامانه‌های سازمانی و فول‌استک.',
+        'عرفان محمدی — توسعه‌دهنده‌ی بک‌اند پایتون، با تمرکز بر طراحی API و پایگاه داده برای سامانه‌های سازمانی.',
     },
 
     intro: {
       tag: 'معرفی',
       title: 'کوتاه درباره‌ی کاری که می‌کنم',
       body:
-        'حوزه‌ی کاری من طراحی و توسعه‌ی سامانه‌های تحت وب، نرم‌افزارهای اختصاصی و راهکارهای اتوماسیون در محیط سازمانی است. خروجی کار برای من محصولی است که نیاز کسب‌وکار را دقیق پوشش دهد و در کیفیت فنی، کارایی و نگهداشت‌پذیری هم قابل دفاع باشد.',
+        'روی بک‌اند و APIهای سامانه‌های تحت وب و راهکارهای اتوماسیون در محیط سازمانی کار می‌کنم. تمرکزم روی طراحی درستِ داده، کارایی و کدی است که در بلندمدت قابل نگهداری بماند.',
       cta: 'سابقه‌ی کامل',
     },
 
@@ -98,33 +97,33 @@ export const translations = {
 
     about: {
       title: 'درباره',
-      subtitle: 'از مهندسی داده و سامانه‌های دسکتاپ تا معماری وب و هوش مصنوعی.',
+      subtitle: 'از برنامه‌نویسی پایگاه داده و سامانه‌های دسکتاپ تا بک‌اند و API‌های وب.',
       intro:
-        'مهندس نرم‌افزار با تمرکز بر طراحی، توسعه و پیاده‌سازی سامانه‌های تحت وب، نرم‌افزارهای اختصاصی و اتوماسیون فرایندهای سازمانی.\n\nدر هر پروژه، معماری، کیفیت پیاده‌سازی، امنیت، مستندسازی و نگهداشت‌پذیری را اصل می‌گیرم تا محصول علاوه بر نیاز امروز، در بلندمدت هم قابل توسعه و پشتیبانی بماند.\n\nیادگیری مستمر، به‌کارگیری فناوری‌های روز و انتقال دانش از راه نوشتن و آموزش، بخشی ثابت از کار من است.',
+        'توسعه‌دهنده‌ی بک‌اند با تمرکز بر طراحی API، مدل‌سازی داده و سامانه‌های سازمانی.\n\nدر هر پروژه به طراحی درستِ پایگاه داده، امنیت، مستندسازی و نگهداشت‌پذیری اهمیت می‌دهم تا محصول در بلندمدت هم قابل توسعه بماند.\n\nیادگیری مستمر و به‌کارگیری فناوری‌های روز، بخشی ثابت از کار من است.',
       timelineTag: 'مسیر حرفه‌ای',
       timeline: [
         {
           time: 'پایه',
-          title: 'مهندسی داده و سامانه‌های دسکتاپ',
+          title: 'برنامه‌نویسی پایگاه داده و دسکتاپ',
           body:
-            'توسعه‌ی نرم‌افزارهای دسکتاپ و پایگاه داده در محیط سازمانی؛ کار جدی با SQL Server، رویه‌های ذخیره‌شده، بهینه‌سازی کوئری و گزارش‌سازی. مبنای نگاه امروزم به طراحی مدل داده همین‌جا شکل گرفت.',
+            'توسعه‌ی نرم‌افزارهای دسکتاپ و پایگاه داده در محیط سازمانی؛ کار با SQL Server، رویه‌های ذخیره‌شده، بهینه‌سازی کوئری و گزارش‌گیری.',
         },
         {
           time: 'گسترش',
-          title: 'انتقال به وب و طراحی API',
+          title: 'حرکت به بک‌اند وب و طراحی API',
           body:
-            'حرکت از نرم‌افزار دسکتاپ به سرویس و وب؛ توسعه با پایتون و جنگو و طراحی REST API با نگاه به قرارداد، نسخه‌بندی و امنیت. در همین دوره تعامل و رابط کاربری هم بخشی از مسئولیت مهندسی شد.',
+            'توسعه با پایتون و Django و طراحی REST API با نگاه به قرارداد، امنیت و نسخه‌بندی.',
         },
         {
           time: 'اکنون',
-          title: 'معماری فول‌استک و ادغام هوش مصنوعی',
+          title: 'بک‌اند سامانه‌های داده‌محور',
           body:
-            'تمرکز روی سامانه‌های داده‌محور و فول‌استک، طراحی معماری سرویس‌ها و آوردن سرویس‌های هوش مصنوعی به جریان کار — با پایبندی به کد تمیز و اصول مهندسی.',
+            'تمرکز روی طراحی API و پایگاه داده برای سامانه‌های سازمانی، و ادغام سرویس‌های هوش مصنوعی در گردش‌کار.',
         },
       ],
       nowTag: '// اکنون',
       now:
-        'در حال کار روی سامانه‌های سازمانی داده‌محور، پالایش الگوهای معماری در پروژه‌های فول‌استک، و افزودن قابلیت‌های مبتنی بر هوش مصنوعی به گردش‌کارهای واقعی.',
+        'در حال کار روی بک‌اند سامانه‌های سازمانی داده‌محور و طراحی API و مدل داده‌ی آن‌ها.',
       detailsTag: 'مشخصات',
       labels: {
         name: 'نام',
@@ -148,6 +147,8 @@ export const translations = {
         demo: 'نسخه‌ی زنده',
         private: 'مخزن خصوصی',
         privateNote: 'کد این پروژه خصوصی است؛ جزئیات بیشتر بر اساس درخواست.',
+        more: 'مسئله، راهکار، نتیجه',
+        less: 'بستن',
       },
       emptyTitle: 'نمونه‌کاری ثبت نشده',
       emptyBody: 'به‌زودی.',
@@ -160,9 +161,9 @@ export const translations = {
       emptyTitle: 'به‌زودی',
       emptyBody: 'فهرست کامل به‌زودی تکمیل می‌شود.',
       categories: {
-        frontend: { title: 'توسعه‌ی فرانت‌اند', description: 'ساخت رابط‌های کاربری مدرن، واکنش‌گرا و بهینه.' },
         backend: { title: 'توسعه‌ی بک‌اند', description: 'طراحی API، منطق کسب‌وکار و سرویس‌های سمت سرور.' },
         database: { title: 'پایگاه داده', description: 'طراحی، مدل‌سازی و بهینه‌سازی پایگاه‌های داده‌ی رابطه‌ای.' },
+        frontend: { title: 'رابط کاربری', description: 'ساخت داشبورد و رابط کاربری برای مصرف APIها.' },
         ai: { title: 'هوش مصنوعی و اتوماسیون', description: 'ادغام سرویس‌های هوش مصنوعی و خودکارسازی فرایندها.' },
         enterprise: { title: 'نرم‌افزار سازمانی', description: 'طراحی و توسعه‌ی سامانه‌های اختصاصی و سیستم‌های داخلی.' },
         tools: { title: 'ابزارهای توسعه', description: 'ابزارها و محیط‌های کار در چرخه‌ی توسعه.' },
@@ -170,16 +171,9 @@ export const translations = {
       },
     },
 
-    tutorials: {
-      title: 'یادداشت‌ها',
-      subtitle: 'یادداشت‌های فنی و تجربه‌های توسعه.',
-      emptyTitle: 'در حال آماده‌سازی',
-      emptyBody: 'یادداشت‌های فنی به‌زودی در این بخش منتشر می‌شوند.',
-    },
-
     contact: {
       title: 'تماس',
-      subtitle: 'برای همکاری، اجرای پروژه، مشاوره‌ی فنی یا فرصت شغلی در دسترسم؛ خوشحال می‌شوم پیام‌تان را بشنوم.',
+      subtitle: 'برای همکاری، اجرای پروژه، مشاوره‌ی فنی یا فرصت شغلی در دسترسم.',
       responseTag: '200 OK',
       cta: 'ارسال ایمیل',
       copied: 'کپی شد',
@@ -192,11 +186,6 @@ export const translations = {
         linkedin: 'لینکدین',
         website: 'وب‌سایت',
       },
-    },
-
-    footer: {
-      rights: 'از پایه ساخته شده، بدون قالب آماده.',
-      built: 'React + Vite',
     },
 
     notFound: {
@@ -215,7 +204,6 @@ export const translations = {
       about: 'About',
       projects: 'Projects',
       skills: 'Skills',
-      tutorials: 'Notes',
       contact: 'Contact',
     },
 
@@ -223,18 +211,18 @@ export const translations = {
 
     boot: [
       'booting environment',
-      'loading modules: react · router · svg',
+      'loading modules',
       'connecting to profile service',
-      'GET /profile — 200 OK',
+      'GET /profile · 200',
       'ready.',
     ],
 
     hero: {
       status: 'Available for projects and collaboration',
       name: 'Erfan Mohammadi',
-      role: 'Software Engineer — backend-focused, full-stack architecture',
+      role: 'Python Backend Developer · Databases',
       tagline:
-        'I design and build software systems at enterprise scale — from the data model and API to the interface. The focus: staying up under real load, clean architecture, and delivery you can rely on.',
+        'I build the backend and APIs for enterprise systems — with a focus on sound database design, reliability, and code that stays maintainable.',
       cta1: 'View projects',
       cta2: 'Contact',
     },
@@ -245,12 +233,12 @@ export const translations = {
       hint: 'Click any node to jump to that section — or open the console and send a request.',
       openConsole: 'Open API console',
       nodes: {
-        'client': 'the entry point — background',
-        'api-gateway': 'entry to the work — projects',
-        'auth-service': 'the access path — ways to reach me',
-        'ticket-service': 'a real system — ticket management',
-        'ai-service': 'AI & automation — skills',
-        'datastore': 'the data layer — databases',
+        'client': 'background',
+        'api-gateway': 'all projects',
+        'auth-service': 'ways to reach me',
+        'ticket-service': 'a real project',
+        'ai-service': 'skills and tools',
+        'datastore': 'databases',
       },
     },
 
@@ -259,7 +247,7 @@ export const translations = {
       subtitle: 'Call this portfolio like an API.',
       prompt: '~/erfan',
       placeholder: 'type a command and hit Enter — e.g. GET /projects',
-      welcome: 'Welcome to the console. Type "help" for the command list.',
+      welcome: 'Type "help" for the command list.',
       close: 'Close',
       toggleHint: 'Ctrl + K',
       helpTitle: 'Available commands',
@@ -279,14 +267,14 @@ export const translations = {
         clear: 'clear the screen',
       },
       whoami:
-        'Erfan Mohammadi — software engineer focused on backend and system architecture; builder of enterprise and full-stack systems.',
+        'Erfan Mohammadi — Python backend developer, focused on API design and databases for enterprise systems.',
     },
 
     intro: {
       tag: 'Introduction',
       title: 'Briefly, what I do',
       body:
-        'I work on web applications, custom software, and automation in an enterprise setting. What I ship has to cover the business need precisely and still stand up on technical quality, performance, and long-term maintainability.',
+        'I work on the backend and APIs of web applications and on automation in an enterprise setting. The focus is sound data design, performance, and code that stays maintainable over time.',
       cta: 'Full background',
     },
 
@@ -306,33 +294,33 @@ export const translations = {
 
     about: {
       title: 'About',
-      subtitle: 'From data engineering and desktop systems to web architecture and AI.',
+      subtitle: 'From database programming and desktop systems to web backends and APIs.',
       intro:
-        'Software engineer focused on the design, development, and delivery of web applications, custom software, and enterprise process automation.\n\nOn every project I treat architecture, implementation quality, security, documentation, and maintainability as non-negotiable — so the product covers today’s need and stays extensible and supportable over time.\n\nContinuous learning, current technology, and passing on knowledge through writing and teaching are a constant part of how I work.',
+        'Backend developer, focused on API design, data modeling, and enterprise systems.\n\nOn every project I care about sound database design, security, documentation, and maintainability — so the product stays extensible over time.\n\nContinuous learning and current technology are a constant part of how I work.',
       timelineTag: 'Career path',
       timeline: [
         {
           time: 'foundation',
-          title: 'Data engineering & desktop systems',
+          title: 'Database & desktop programming',
           body:
-            'Building desktop and database software in an enterprise environment — serious work with SQL Server, stored procedures, query optimization, and reporting. The way I approach data modeling today was formed here.',
+            'Building desktop and database software in an enterprise environment — SQL Server, stored procedures, query optimization, and reporting.',
         },
         {
           time: 'expansion',
-          title: 'Moving to the web and API design',
+          title: 'Moving to web backends and API design',
           body:
-            'From desktop software to services and the web — building with Python and Django and designing REST APIs with an eye on contract, versioning, and security. Interaction and UI became part of the engineering remit in this period.',
+            'Building with Python and Django and designing REST APIs with an eye on contract, security, and versioning.',
         },
         {
           time: 'now',
-          title: 'Full-stack architecture & AI integration',
+          title: 'Backend for data-driven systems',
           body:
-            'Focused on data-driven, full-stack systems, designing service architecture, and bringing AI services into real workflows — while holding to clean code and engineering principles.',
+            'Focused on API and database design for enterprise systems, and bringing AI services into the workflow.',
         },
       ],
       nowTag: '// now',
       now:
-        'Working on data-driven enterprise systems, refining architecture patterns across full-stack projects, and adding AI-backed capabilities to real workflows.',
+        'Working on the backend of data-driven enterprise systems and the design of their APIs and data models.',
       detailsTag: 'Details',
       labels: {
         name: 'Name',
@@ -356,6 +344,8 @@ export const translations = {
         demo: 'Live version',
         private: 'Private repository',
         privateNote: 'The code for this project is private; more detail on request.',
+        more: 'Problem, approach, result',
+        less: 'Close',
       },
       emptyTitle: 'No projects listed',
       emptyBody: 'Coming soon.',
@@ -368,9 +358,9 @@ export const translations = {
       emptyTitle: 'Coming soon',
       emptyBody: 'The full list is on its way.',
       categories: {
-        frontend: { title: 'Frontend Development', description: 'Building responsive, accessible, modern user interfaces.' },
         backend: { title: 'Backend Development', description: 'API design, business logic, and server-side services.' },
         database: { title: 'Database Systems', description: 'Designing, modeling, and optimizing relational databases.' },
+        frontend: { title: 'User Interface', description: 'Building dashboards and interfaces that consume the APIs.' },
         ai: { title: 'AI & Automation', description: 'Integrating AI services and automating workflows.' },
         enterprise: { title: 'Enterprise Software', description: 'Custom business applications and internal systems.' },
         tools: { title: 'Development Tools', description: 'Tools and environments across the development cycle.' },
@@ -378,16 +368,9 @@ export const translations = {
       },
     },
 
-    tutorials: {
-      title: 'Notes',
-      subtitle: 'Technical notes and development insights.',
-      emptyTitle: 'In preparation',
-      emptyBody: 'Technical notes will be published here soon.',
-    },
-
     contact: {
       title: 'Contact',
-      subtitle: 'Available for collaboration, a project, technical advice, or a role — glad to hear from you.',
+      subtitle: 'Available for collaboration, a project, technical advice, or a role.',
       responseTag: '200 OK',
       cta: 'Send an email',
       copied: 'Copied',
@@ -400,11 +383,6 @@ export const translations = {
         linkedin: 'LinkedIn',
         website: 'Website',
       },
-    },
-
-    footer: {
-      rights: 'Built from the ground up, no template.',
-      built: 'React + Vite',
     },
 
     notFound: {
@@ -423,7 +401,6 @@ export const translations = {
       about: 'Über mich',
       projects: 'Projekte',
       skills: 'Fähigkeiten',
-      tutorials: 'Notizen',
       contact: 'Kontakt',
     },
 
@@ -431,18 +408,18 @@ export const translations = {
 
     boot: [
       'Umgebung wird gestartet',
-      'Module werden geladen: react · router · svg',
+      'Module werden geladen',
       'Verbindung zum Profildienst',
-      'GET /profile — 200 OK',
+      'GET /profile · 200',
       'bereit.',
     ],
 
     hero: {
       status: 'Verfügbar für Projekte und Zusammenarbeit',
       name: 'Erfan Mohammadi',
-      role: 'Software Engineer — mit Schwerpunkt Backend und Full-Stack-Architektur',
+      role: 'Python Backend Developer · Datenbanken',
       tagline:
-        'Ich entwerfe und baue Softwaresysteme auf Unternehmensniveau — vom Datenmodell und der API bis zur Oberfläche. Der Fokus: Stabilität unter echter Last, saubere Architektur und verlässliche Auslieferung.',
+        'Ich baue Backend und APIs für Unternehmenssysteme — mit Fokus auf solidem Datenbankdesign, Zuverlässigkeit und wartbarem Code.',
       cta1: 'Projekte ansehen',
       cta2: 'Kontakt',
     },
@@ -453,12 +430,12 @@ export const translations = {
       hint: 'Klick auf einen Knoten, um zum Bereich zu springen — oder öffne die Konsole und sende eine Anfrage.',
       openConsole: 'API-Konsole öffnen',
       nodes: {
-        'client': 'der Einstieg — Werdegang',
-        'api-gateway': 'Zugang zur Arbeit — Projekte',
-        'auth-service': 'der Zugangsweg — Kontaktmöglichkeiten',
-        'ticket-service': 'ein reales System — Ticket-Management',
-        'ai-service': 'KI & Automatisierung — Fähigkeiten',
-        'datastore': 'die Datenebene — Datenbanken',
+        'client': 'Werdegang',
+        'api-gateway': 'alle Projekte',
+        'auth-service': 'Kontaktmöglichkeiten',
+        'ticket-service': 'ein echtes Projekt',
+        'ai-service': 'Fähigkeiten und Werkzeuge',
+        'datastore': 'Datenbanken',
       },
     },
 
@@ -467,7 +444,7 @@ export const translations = {
       subtitle: 'Ruf dieses Portfolio wie eine API auf.',
       prompt: '~/erfan',
       placeholder: 'Befehl eingeben und Enter drücken — z. B. GET /projects',
-      welcome: 'Willkommen in der Konsole. Tippe "help" für die Befehlsliste.',
+      welcome: 'Tippe "help" für die Befehlsliste.',
       close: 'Schließen',
       toggleHint: 'Strg + K',
       helpTitle: 'Verfügbare Befehle',
@@ -487,14 +464,14 @@ export const translations = {
         clear: 'Bildschirm leeren',
       },
       whoami:
-        'Erfan Mohammadi — Software Engineer mit Schwerpunkt Backend und Systemarchitektur; baut Unternehmens- und Full-Stack-Systeme.',
+        'Erfan Mohammadi — Python Backend Developer, mit Fokus auf API-Design und Datenbanken für Unternehmenssysteme.',
     },
 
     intro: {
       tag: 'Einführung',
       title: 'Kurz gesagt: was ich mache',
       body:
-        'Ich arbeite an Webanwendungen, individueller Software und Automatisierung im Unternehmensumfeld. Was ich ausliefere, muss den fachlichen Bedarf genau abdecken und zugleich bei technischer Qualität, Leistung und langfristiger Wartbarkeit bestehen.',
+        'Ich arbeite am Backend und an den APIs von Webanwendungen sowie an Automatisierung im Unternehmensumfeld. Der Fokus liegt auf solidem Datendesign, Leistung und wartbarem Code.',
       cta: 'Vollständiger Werdegang',
     },
 
@@ -514,33 +491,33 @@ export const translations = {
 
     about: {
       title: 'Über mich',
-      subtitle: 'Von Data Engineering und Desktop-Systemen zu Web-Architektur und KI.',
+      subtitle: 'Von Datenbankprogrammierung und Desktop-Systemen zu Web-Backends und APIs.',
       intro:
-        'Software Engineer mit Schwerpunkt auf Konzeption, Entwicklung und Auslieferung von Webanwendungen, individueller Software und unternehmensweiter Prozessautomatisierung.\n\nBei jedem Projekt sind Architektur, Umsetzungsqualität, Sicherheit, Dokumentation und Wartbarkeit für mich nicht verhandelbar — damit das Produkt den heutigen Bedarf deckt und langfristig erweiterbar und wartbar bleibt.\n\nKontinuierliches Lernen, aktuelle Technologien und Wissensvermittlung durch Schreiben und Lehren gehören fest zu meiner Arbeitsweise.',
+        'Backend Developer, mit Fokus auf API-Design, Datenmodellierung und Unternehmenssysteme.\n\nBei jedem Projekt achte ich auf solides Datenbankdesign, Sicherheit, Dokumentation und Wartbarkeit — damit das Produkt langfristig erweiterbar bleibt.\n\nKontinuierliches Lernen und aktuelle Technologien gehören fest zu meiner Arbeitsweise.',
       timelineTag: 'Werdegang',
       timeline: [
         {
           time: 'Grundlage',
-          title: 'Data Engineering & Desktop-Systeme',
+          title: 'Datenbank- & Desktop-Programmierung',
           body:
-            'Entwicklung von Desktop- und Datenbanksoftware im Unternehmensumfeld — intensive Arbeit mit SQL Server, Stored Procedures, Query-Optimierung und Reporting. Mein heutiger Blick auf Datenmodellierung ist hier entstanden.',
+            'Entwicklung von Desktop- und Datenbanksoftware im Unternehmensumfeld — SQL Server, Stored Procedures, Query-Optimierung und Reporting.',
         },
         {
           time: 'Erweiterung',
-          title: 'Wechsel zu Web und API-Design',
+          title: 'Wechsel zu Web-Backends und API-Design',
           body:
-            'Von Desktop-Software zu Services und Web — Entwicklung mit Python und Django und Entwurf von REST-APIs mit Blick auf Vertrag, Versionierung und Sicherheit. Interaktion und UI wurden in dieser Zeit Teil des Engineering-Auftrags.',
+            'Entwicklung mit Python und Django und Entwurf von REST-APIs mit Blick auf Vertrag, Sicherheit und Versionierung.',
         },
         {
           time: 'jetzt',
-          title: 'Full-Stack-Architektur & KI-Integration',
+          title: 'Backend für datengetriebene Systeme',
           body:
-            'Fokus auf datengetriebene Full-Stack-Systeme, Entwurf von Service-Architektur und die Einbindung von KI-Diensten in reale Workflows — bei konsequentem Clean Code und Engineering-Prinzipien.',
+            'Fokus auf API- und Datenbankdesign für Unternehmenssysteme und die Einbindung von KI-Diensten in den Workflow.',
         },
       ],
       nowTag: '// jetzt',
       now:
-        'Arbeit an datengetriebenen Unternehmenssystemen, Verfeinerung von Architekturmustern in Full-Stack-Projekten und Ergänzung realer Workflows um KI-gestützte Funktionen.',
+        'Arbeit am Backend datengetriebener Unternehmenssysteme und am Entwurf ihrer APIs und Datenmodelle.',
       detailsTag: 'Details',
       labels: {
         name: 'Name',
@@ -564,6 +541,8 @@ export const translations = {
         demo: 'Live-Version',
         private: 'Privates Repository',
         privateNote: 'Der Code dieses Projekts ist privat; mehr Details auf Anfrage.',
+        more: 'Problem, Ansatz, Ergebnis',
+        less: 'Schließen',
       },
       emptyTitle: 'Keine Projekte gelistet',
       emptyBody: 'Demnächst.',
@@ -576,9 +555,9 @@ export const translations = {
       emptyTitle: 'Demnächst',
       emptyBody: 'Die vollständige Liste folgt.',
       categories: {
-        frontend: { title: 'Frontend-Entwicklung', description: 'Moderne, responsive und zugängliche Oberflächen.' },
         backend: { title: 'Backend-Entwicklung', description: 'API-Design, Geschäftslogik und serverseitige Services.' },
         database: { title: 'Datenbanksysteme', description: 'Entwurf, Modellierung und Optimierung relationaler Datenbanken.' },
+        frontend: { title: 'Benutzeroberfläche', description: 'Dashboards und Oberflächen, die die APIs nutzen.' },
         ai: { title: 'KI & Automatisierung', description: 'Integration von KI-Diensten und Automatisierung von Abläufen.' },
         enterprise: { title: 'Unternehmenssoftware', description: 'Individuelle Geschäftsanwendungen und interne Systeme.' },
         tools: { title: 'Entwicklungswerkzeuge', description: 'Werkzeuge und Umgebungen über den gesamten Entwicklungszyklus.' },
@@ -586,16 +565,9 @@ export const translations = {
       },
     },
 
-    tutorials: {
-      title: 'Notizen',
-      subtitle: 'Technische Notizen und Erfahrungen aus der Entwicklung.',
-      emptyTitle: 'In Vorbereitung',
-      emptyBody: 'Technische Notizen werden hier bald veröffentlicht.',
-    },
-
     contact: {
       title: 'Kontakt',
-      subtitle: 'Verfügbar für Zusammenarbeit, ein Projekt, technische Beratung oder eine Stelle — ich höre gern von Ihnen.',
+      subtitle: 'Verfügbar für Zusammenarbeit, ein Projekt, technische Beratung oder eine Stelle.',
       responseTag: '200 OK',
       cta: 'E-Mail senden',
       copied: 'Kopiert',
@@ -608,11 +580,6 @@ export const translations = {
         linkedin: 'LinkedIn',
         website: 'Website',
       },
-    },
-
-    footer: {
-      rights: 'Von Grund auf gebaut, ohne Vorlage.',
-      built: 'React + Vite',
     },
 
     notFound: {

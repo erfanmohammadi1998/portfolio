@@ -7,9 +7,9 @@ export const profile = {
 
   name: { fa: 'عرفان محمدی', en: 'Erfan Mohammadi', de: 'Erfan Mohammadi' },
   role: {
-    fa: 'مهندس نرم‌افزار؛ بک‌اند و معماری فول‌استک',
-    en: 'Software Engineer — backend & full-stack architecture',
-    de: 'Software Engineer — Backend & Full-Stack-Architektur',
+    fa: 'توسعه‌دهنده‌ی بک‌اند پایتون و پایگاه داده',
+    en: 'Python Backend Developer · Databases',
+    de: 'Python Backend Developer · Datenbanken',
   },
   location: { fa: 'تهران، ایران', en: 'Tehran, Iran', de: 'Teheran, Iran' },
   availability: {
