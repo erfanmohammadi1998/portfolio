@@ -4,33 +4,43 @@ export const translations = {
 
     nav: {
       home: 'خانه',
-      about: 'درباره من',
+      about: 'درباره',
       projects: 'نمونه‌کارها',
       skills: 'مهارت‌ها',
-      tutorials: 'آموزش‌ها',
+      tutorials: 'یادداشت‌ها',
       contact: 'تماس',
     },
 
+    brand: 'عرفان محمدی',
+
+    boot: [
+      'راه‌اندازی محیط',
+      'بارگذاری ماژول‌ها: react · router · svg',
+      'اتصال به سرویس پروفایل',
+      'GET /profile — 200 OK',
+      'آماده.',
+    ],
+
     hero: {
-      eyebrow: 'در دسترس برای همکاری',
+      status: 'در دسترس برای پروژه و همکاری',
       name: 'عرفان محمدی',
-      role: 'مهندس نرم‌افزار — بک‌اند و فول‌استک',
+      role: 'مهندس نرم‌افزار؛ متمرکز بر بک‌اند و معماری فول‌استک',
       tagline:
-        'سیستم‌هایی می‌سازم که زیر بار واقعی سرپا می‌مانند و رابط‌هایی که حس کار جانبی نمی‌دهند. همین صفحه یک نمونه‌ی کوچک از هر دو است.',
+        'سامانه‌های نرم‌افزاری در مقیاس سازمانی طراحی و می‌سازم؛ از مدل داده و API تا رابط کاربری. تمرکزم روی پایداری زیر بار واقعی، معماری تمیز و تحویل قابل‌اتکاست.',
       cta1: 'دیدن نمونه‌کارها',
-      cta2: 'تماس با من',
+      cta2: 'تماس',
     },
 
     map: {
       tag: 'نقشه‌ی سیستم',
-      title: 'این سایت را مثل یک معماری بخوان.',
-      hint: 'روی هر گره کلیک کن تا به آن بخش بروی — یا کنسول را باز کن و درخواست بزن.',
+      title: 'این سایت را مثل یک معماری بخوانید.',
+      hint: 'روی هر گره کلیک کنید تا به همان بخش بروید؛ یا کنسول را باز کنید و درخواست بفرستید.',
       openConsole: 'باز کردن کنسول API',
       nodes: {
-        'client': 'کیست که درخواست می‌زند — درباره‌ی من',
+        'client': 'نقطه‌ی شروع — معرفی و سابقه',
         'api-gateway': 'ورودی همه‌ی کارها — نمونه‌کارها',
-        'auth-service': 'گرفتن دسترسی — راه‌های تماس',
-        'ticket-service': 'یک پروژه‌ی واقعی — سامانه‌ی تیکت',
+        'auth-service': 'مسیر دسترسی — راه‌های تماس',
+        'ticket-service': 'یک سامانه‌ی واقعی — مدیریت تیکت',
         'ai-service': 'هوش مصنوعی و اتوماسیون — مهارت‌ها',
         'datastore': 'لایه‌ی داده — پایگاه داده',
       },
@@ -38,89 +48,84 @@ export const translations = {
 
     console: {
       title: 'کنسول API',
-      subtitle: 'این پورتفولیو را مثل یک API صدا بزن.',
-      hintPrefix: 'دستورها:',
-      prompt: 'erfan.dev',
-      placeholder: 'یک دستور بنویس و Enter بزن — مثلاً GET /projects',
-      welcome: 'به کنسول خوش آمدی. «help» را بزن تا فهرست دستورها را ببینی.',
+      subtitle: 'این پورتفولیو را مثل یک API صدا بزنید.',
+      prompt: '~/erfan',
+      placeholder: 'یک دستور بنویسید و Enter بزنید؛ مثلاً GET /projects',
+      welcome: 'به کنسول خوش آمدید. برای فهرست دستورها «help» را بزنید.',
       close: 'بستن',
       toggleHint: 'Ctrl + K',
-      helpTitle: 'دستورهای موجود',
+      helpTitle: 'دستورهای در دسترس',
       notFound: 'دستور پیدا نشد',
-      tryHelp: '«help» را امتحان کن.',
+      tryHelp: '«help» را امتحان کنید.',
       routing: 'در حال رفتن به',
       commands: {
         help: 'نمایش همین فهرست',
-        'GET /about': 'خلاصه‌ی «درباره‌ی من»',
+        'GET /about': 'خلاصه‌ی سابقه و تخصص',
         'GET /projects': 'فهرست نمونه‌کارها',
         'GET /projects/:slug': 'جزئیات یک پروژه',
         'GET /skills': 'مهارت‌ها بر اساس حوزه',
         'POST /contact': 'راه‌های تماس',
         whoami: 'معرفی یک‌خطی',
-        open: 'باز کردن یک مسیر — مثلاً open /projects',
+        open: 'باز کردن یک مسیر؛ مثلاً open /projects',
         clear: 'پاک کردن صفحه',
       },
       whoami:
-        'عرفان محمدی — مهندس نرم‌افزار. گرایش بک‌اند، توانمند در فول‌استک، بی‌علاقه به قالب‌های آماده.',
+        'عرفان محمدی — مهندس نرم‌افزار با تمرکز بر بک‌اند و معماری سیستم؛ سازنده‌ی سامانه‌های سازمانی و فول‌استک.',
     },
 
     intro: {
       tag: 'معرفی',
-      title: 'نگاهی کوتاه',
+      title: 'کوتاه درباره‌ی کاری که می‌کنم',
       body:
-        'در طراحی و توسعه‌ی نرم‌افزارهای تحت وب، سامانه‌های اختصاصی و راهکارهای اتوماسیون کار می‌کنم. هدفم محصولی است که هم نیاز کسب‌وکار را پاسخ دهد و هم از نظر کیفیت فنی، کارایی و نگهداشت‌پذیری در سطح خوبی بماند.',
-      cta: 'بیشتر درباره‌ی من',
+        'حوزه‌ی کاری من طراحی و توسعه‌ی سامانه‌های تحت وب، نرم‌افزارهای اختصاصی و راهکارهای اتوماسیون در محیط سازمانی است. خروجی کار برای من محصولی است که نیاز کسب‌وکار را دقیق پوشش دهد و در کیفیت فنی، کارایی و نگهداشت‌پذیری هم قابل دفاع باشد.',
+      cta: 'سابقه‌ی کامل',
     },
 
-    stats: {
-      tag: 'در یک نگاه',
-      title: 'خلاصه‌ی وضعیت',
-    },
-
-    stack: {
-      tag: 'فناوری‌ها',
-      title: 'ابزارها و فناوری‌ها',
-    },
+    stats: { tag: 'در یک نگاه', title: 'خلاصه‌ی حرفه‌ای' },
+    stack: { tag: 'فناوری‌ها', title: 'ابزارها و فناوری‌های کاری' },
 
     featured: {
       tag: 'منتخب کارها',
-      title: 'چند پروژه که ارزش گفتن دارند.',
+      title: 'چند پروژه که ارزش توضیح دارند.',
       all: 'دیدن همه‌ی نمونه‌کارها',
     },
 
     testimonials: {
       tag: 'همکاری‌ها',
-      title: 'دیدگاه همکاران و مشتریان',
-      emptyTitle: 'هنوز دیدگاهی ثبت نشده',
-      emptyBody: 'بعد از تکمیل پروژه‌های بیشتر، بازخورد همکاران و مشتریان این‌جا منتشر می‌شود.',
+      title: 'بازخورد همکاران و کارفرمایان',
+      emptyTitle: 'به‌زودی',
+      emptyBody: 'بازخورد همکاران و کارفرمایان پس از انتشار پروژه‌های بیشتر در این بخش قرار می‌گیرد.',
     },
 
     about: {
-      title: 'درباره‌ی من',
-      subtitle: 'مسیر کوتاهی از دسکتاپ و پایگاه داده تا وب و هوش مصنوعی.',
+      title: 'درباره',
+      subtitle: 'از مهندسی داده و سامانه‌های دسکتاپ تا معماری وب و هوش مصنوعی.',
       intro:
-        'مهندس نرم‌افزارم و روی طراحی، توسعه و پیاده‌سازی سامانه‌های تحت وب، نرم‌افزارهای اختصاصی و اتوماسیون فرایندها کار می‌کنم.\n\nدر اجرای پروژه‌ها به معماری، کیفیت پیاده‌سازی، امنیت، مستندسازی و نگهداشت‌پذیری اهمیت می‌دهم تا محصول علاوه بر نیاز امروز، فردا هم قابل توسعه و پشتیبانی باشد.\n\nبه یادگیری مستمر، استفاده از فناوری‌های روز و به‌اشتراک‌گذاری دانش از راه آموزش و محتوای فنی علاقه دارم.',
-      timelineTag: 'مسیر',
+        'مهندس نرم‌افزار با تمرکز بر طراحی، توسعه و پیاده‌سازی سامانه‌های تحت وب، نرم‌افزارهای اختصاصی و اتوماسیون فرایندهای سازمانی.\n\nدر هر پروژه، معماری، کیفیت پیاده‌سازی، امنیت، مستندسازی و نگهداشت‌پذیری را اصل می‌گیرم تا محصول علاوه بر نیاز امروز، در بلندمدت هم قابل توسعه و پشتیبانی بماند.\n\nیادگیری مستمر، به‌کارگیری فناوری‌های روز و انتقال دانش از راه نوشتن و آموزش، بخشی ثابت از کار من است.',
+      timelineTag: 'مسیر حرفه‌ای',
       timeline: [
         {
-          time: 'شروع',
-          title: 'دسکتاپ و برنامه‌نویسی پایگاه داده',
+          time: 'پایه',
+          title: 'مهندسی داده و سامانه‌های دسکتاپ',
           body:
-            'کار را با نرم‌افزارهای دسکتاپ و پایگاه داده شروع کردم؛ VB.NET، Windows Forms، گزارش‌سازی و T-SQL روی SQL Server. همان‌جا یاد گرفتم مدل داده‌ی درست، نصف کار است.',
+            'توسعه‌ی نرم‌افزارهای دسکتاپ و پایگاه داده در محیط سازمانی؛ کار جدی با SQL Server، رویه‌های ذخیره‌شده، بهینه‌سازی کوئری و گزارش‌سازی. مبنای نگاه امروزم به طراحی مدل داده همین‌جا شکل گرفت.',
         },
         {
-          time: 'گذار',
-          title: 'حرکت به سمت وب و بک‌اند',
+          time: 'گسترش',
+          title: 'انتقال به وب و طراحی API',
           body:
-            'از فرم‌های دسکتاپ رسیدم به API و وب. Python و Django و طراحی REST؛ و این نگاه که یک endpoint سریع اگر رابطش ضعیف باشد، ارزشی ندارد.',
+            'حرکت از نرم‌افزار دسکتاپ به سرویس و وب؛ توسعه با پایتون و جنگو و طراحی REST API با نگاه به قرارداد، نسخه‌بندی و امنیت. در همین دوره تعامل و رابط کاربری هم بخشی از مسئولیت مهندسی شد.',
         },
         {
           time: 'اکنون',
-          title: 'فول‌استک، معماری و هوش مصنوعی',
+          title: 'معماری فول‌استک و ادغام هوش مصنوعی',
           body:
-            'حالا روی نرم‌افزارهای سازمانی، سامانه‌های داده‌محور و فول‌استک تمرکز دارم و سرویس‌های هوش مصنوعی را در جریان کار می‌آورم — با تأکید بر کد تمیز و معماری.',
+            'تمرکز روی سامانه‌های داده‌محور و فول‌استک، طراحی معماری سرویس‌ها و آوردن سرویس‌های هوش مصنوعی به جریان کار — با پایبندی به کد تمیز و اصول مهندسی.',
         },
       ],
+      nowTag: '// اکنون',
+      now:
+        'در حال کار روی سامانه‌های سازمانی داده‌محور، پالایش الگوهای معماری در پروژه‌های فول‌استک، و افزودن قابلیت‌های مبتنی بر هوش مصنوعی به گردش‌کارهای واقعی.',
       detailsTag: 'مشخصات',
       labels: {
         name: 'نام',
@@ -151,29 +156,29 @@ export const translations = {
       title: 'مهارت‌ها',
       subtitle: 'فناوری‌ها، ابزارها و حوزه‌های تخصصی.',
       filterAll: 'همه',
-      emptyTitle: 'در حال تکمیل',
-      emptyBody: 'فهرست کامل به‌زودی.',
+      emptyTitle: 'به‌زودی',
+      emptyBody: 'فهرست کامل به‌زودی تکمیل می‌شود.',
       categories: {
         frontend: { title: 'توسعه‌ی فرانت‌اند', description: 'ساخت رابط‌های کاربری مدرن، واکنش‌گرا و بهینه.' },
-        backend: { title: 'توسعه‌ی بک‌اند', description: 'پیاده‌سازی APIها، منطق کسب‌وکار و سرویس‌های سمت سرور.' },
-        database: { title: 'پایگاه داده', description: 'طراحی، مدل‌سازی و بهینه‌سازی پایگاه‌های داده.' },
-        ai: { title: 'هوش مصنوعی و اتوماسیون', description: 'یکپارچه‌سازی سرویس‌های هوش مصنوعی و خودکارسازی فرایندها.' },
-        enterprise: { title: 'نرم‌افزار سازمانی', description: 'طراحی و توسعه‌ی سامانه‌های اختصاصی سازمانی.' },
-        tools: { title: 'ابزارهای توسعه', description: 'ابزارها و محیط‌های کار در فرایند توسعه.' },
+        backend: { title: 'توسعه‌ی بک‌اند', description: 'طراحی API، منطق کسب‌وکار و سرویس‌های سمت سرور.' },
+        database: { title: 'پایگاه داده', description: 'طراحی، مدل‌سازی و بهینه‌سازی پایگاه‌های داده‌ی رابطه‌ای.' },
+        ai: { title: 'هوش مصنوعی و اتوماسیون', description: 'ادغام سرویس‌های هوش مصنوعی و خودکارسازی فرایندها.' },
+        enterprise: { title: 'نرم‌افزار سازمانی', description: 'طراحی و توسعه‌ی سامانه‌های اختصاصی و سیستم‌های داخلی.' },
+        tools: { title: 'ابزارهای توسعه', description: 'ابزارها و محیط‌های کار در چرخه‌ی توسعه.' },
         engineering: { title: 'مهندسی نرم‌افزار', description: 'معماری، کد تمیز، تست و نگهداشت سیستم.' },
       },
     },
 
     tutorials: {
-      title: 'آموزش‌ها',
+      title: 'یادداشت‌ها',
       subtitle: 'یادداشت‌های فنی و تجربه‌های توسعه.',
       emptyTitle: 'در حال آماده‌سازی',
-      emptyBody: 'مطالب آموزشی به‌زودی این‌جا منتشر می‌شوند.',
+      emptyBody: 'یادداشت‌های فنی به‌زودی در این بخش منتشر می‌شوند.',
     },
 
     contact: {
       title: 'تماس',
-      subtitle: 'برای همکاری، اجرای پروژه، مشاوره‌ی فنی یا فرصت شغلی، خوشحال می‌شوم بشنوم.',
+      subtitle: 'برای همکاری، اجرای پروژه، مشاوره‌ی فنی یا فرصت شغلی در دسترسم؛ خوشحال می‌شوم پیام‌تان را بشنوم.',
       responseTag: '200 OK',
       cta: 'ارسال ایمیل',
       copied: 'کپی شد',
@@ -189,14 +194,14 @@ export const translations = {
     },
 
     footer: {
-      rights: 'ساخته‌شده از صفر، بدون قالب آماده.',
+      rights: 'از پایه ساخته شده، بدون قالب آماده.',
       built: 'React + Vite',
     },
 
     notFound: {
       code: '404',
       title: 'این مسیر تعریف نشده',
-      body: 'ممکن است صفحه جابه‌جا شده باشد یا آدرس درست نباشد.',
+      body: 'ممکن است صفحه جابه‌جا شده باشد یا نشانی درست نباشد.',
       back: 'بازگشت به خانه',
     },
   },
@@ -209,18 +214,28 @@ export const translations = {
       about: 'About',
       projects: 'Projects',
       skills: 'Skills',
-      tutorials: 'Tutorials',
+      tutorials: 'Notes',
       contact: 'Contact',
     },
 
+    brand: 'Erfan Mohammadi',
+
+    boot: [
+      'booting environment',
+      'loading modules: react · router · svg',
+      'connecting to profile service',
+      'GET /profile — 200 OK',
+      'ready.',
+    ],
+
     hero: {
-      eyebrow: 'Available for collaboration',
+      status: 'Available for projects and collaboration',
       name: 'Erfan Mohammadi',
-      role: 'Software Engineer — Backend & Full Stack',
+      role: 'Software Engineer — backend-focused, full-stack architecture',
       tagline:
-        "I build systems that stay up under real load, and interfaces that don't feel like an afterthought. This page is a small proof of both.",
+        'I design and build software systems at enterprise scale — from the data model and API to the interface. The focus: staying up under real load, clean architecture, and delivery you can rely on.',
       cta1: 'View projects',
-      cta2: 'Get in touch',
+      cta2: 'Contact',
     },
 
     map: {
@@ -229,10 +244,10 @@ export const translations = {
       hint: 'Click any node to jump to that section — or open the console and send a request.',
       openConsole: 'Open API console',
       nodes: {
-        'client': "who's calling — about me",
-        'api-gateway': 'entry point to the work — projects',
-        'auth-service': 'get access — ways to reach me',
-        'ticket-service': 'a real project — ticket system',
+        'client': 'the entry point — background',
+        'api-gateway': 'entry to the work — projects',
+        'auth-service': 'the access path — ways to reach me',
+        'ticket-service': 'a real system — ticket management',
         'ai-service': 'AI & automation — skills',
         'datastore': 'the data layer — databases',
       },
@@ -241,8 +256,7 @@ export const translations = {
     console: {
       title: 'API console',
       subtitle: 'Call this portfolio like an API.',
-      hintPrefix: 'Commands:',
-      prompt: 'erfan.dev',
+      prompt: '~/erfan',
       placeholder: 'type a command and hit Enter — e.g. GET /projects',
       welcome: 'Welcome to the console. Type "help" for the command list.',
       close: 'Close',
@@ -253,7 +267,7 @@ export const translations = {
       routing: 'routing to',
       commands: {
         help: 'show this list',
-        'GET /about': 'the "about me" summary',
+        'GET /about': 'background and focus, summarized',
         'GET /projects': 'list the projects',
         'GET /projects/:slug': 'one project in detail',
         'GET /skills': 'skills by area',
@@ -263,59 +277,62 @@ export const translations = {
         clear: 'clear the screen',
       },
       whoami:
-        'Erfan Mohammadi — software engineer. Backend-leaning, full-stack capable, allergic to templates.',
+        'Erfan Mohammadi — software engineer focused on backend and system architecture; builder of enterprise and full-stack systems.',
     },
 
     intro: {
       tag: 'Introduction',
-      title: 'A brief introduction',
+      title: 'Briefly, what I do',
       body:
-        'I design and build web applications, custom software, and automation solutions. The goal is always a product that answers the business need and still holds up on technical quality, performance, and maintainability.',
-      cta: 'More about me',
+        'I work on web applications, custom software, and automation in an enterprise setting. What I ship has to cover the business need precisely and still stand up on technical quality, performance, and long-term maintainability.',
+      cta: 'Full background',
     },
 
-    stats: { tag: 'At a glance', title: 'The short version' },
-    stack: { tag: 'Technology', title: 'Tools & technologies' },
+    stats: { tag: 'At a glance', title: 'The professional short version' },
+    stack: { tag: 'Technology', title: 'Tools & technologies I work with' },
 
     featured: {
       tag: 'Selected work',
-      title: 'A few projects worth talking about.',
+      title: 'A few projects worth explaining.',
       all: 'See all projects',
     },
 
     testimonials: {
       tag: 'Collaboration',
-      title: 'Client & colleague feedback',
-      emptyTitle: 'No testimonials yet',
-      emptyBody: 'Feedback from clients and collaborators will be published here as more projects wrap up.',
+      title: 'Feedback from colleagues and clients',
+      emptyTitle: 'Coming soon',
+      emptyBody: 'Feedback from colleagues and clients will appear here as more projects are published.',
     },
 
     about: {
       title: 'About',
-      subtitle: 'A short path from desktop and databases to the web and AI.',
+      subtitle: 'From data engineering and desktop systems to web architecture and AI.',
       intro:
-        'I am a software engineer working on the design and development of web applications, custom software, and process automation.\n\nAcross projects I care about architecture, implementation quality, security, documentation, and maintainability — so a product answers today’s need and can still be extended and supported tomorrow.\n\nI enjoy continuous learning, using current technology, and sharing knowledge through writing and teaching.',
-      timelineTag: 'Path',
+        'Software engineer focused on the design, development, and delivery of web applications, custom software, and enterprise process automation.\n\nOn every project I treat architecture, implementation quality, security, documentation, and maintainability as non-negotiable — so the product covers today’s need and stays extensible and supportable over time.\n\nContinuous learning, current technology, and passing on knowledge through writing and teaching are a constant part of how I work.',
+      timelineTag: 'Career path',
       timeline: [
         {
-          time: 'start',
-          title: 'Desktop & database programming',
+          time: 'foundation',
+          title: 'Data engineering & desktop systems',
           body:
-            'I started with desktop applications and databases — VB.NET, Windows Forms, reporting, and T-SQL on SQL Server. That is where I learned a correct data model is half the work.',
+            'Building desktop and database software in an enterprise environment — serious work with SQL Server, stored procedures, query optimization, and reporting. The way I approach data modeling today was formed here.',
         },
         {
-          time: 'transition',
-          title: 'Moving to the web and the backend',
+          time: 'expansion',
+          title: 'Moving to the web and API design',
           body:
-            'From desktop forms to APIs and the web: Python, Django, REST design — and the view that a fast endpoint means little if the interface consuming it feels cheap.',
+            'From desktop software to services and the web — building with Python and Django and designing REST APIs with an eye on contract, versioning, and security. Interaction and UI became part of the engineering remit in this period.',
         },
         {
           time: 'now',
-          title: 'Full stack, architecture, and AI',
+          title: 'Full-stack architecture & AI integration',
           body:
-            'Today I focus on enterprise software, data-driven systems, and full-stack work, bringing AI services into the workflow — with an emphasis on clean code and architecture.',
+            'Focused on data-driven, full-stack systems, designing service architecture, and bringing AI services into real workflows — while holding to clean code and engineering principles.',
         },
       ],
+      nowTag: '// now',
+      now:
+        'Working on data-driven enterprise systems, refining architecture patterns across full-stack projects, and adding AI-backed capabilities to real workflows.',
       detailsTag: 'Details',
       labels: {
         name: 'Name',
@@ -350,25 +367,25 @@ export const translations = {
       emptyBody: 'The full list is on its way.',
       categories: {
         frontend: { title: 'Frontend Development', description: 'Building responsive, accessible, modern user interfaces.' },
-        backend: { title: 'Backend Development', description: 'APIs, business logic, and server-side applications.' },
+        backend: { title: 'Backend Development', description: 'API design, business logic, and server-side services.' },
         database: { title: 'Database Systems', description: 'Designing, modeling, and optimizing relational databases.' },
         ai: { title: 'AI & Automation', description: 'Integrating AI services and automating workflows.' },
         enterprise: { title: 'Enterprise Software', description: 'Custom business applications and internal systems.' },
-        tools: { title: 'Development Tools', description: 'Tools and environments used throughout development.' },
+        tools: { title: 'Development Tools', description: 'Tools and environments across the development cycle.' },
         engineering: { title: 'Software Engineering', description: 'Architecture, clean code, testing, and maintenance.' },
       },
     },
 
     tutorials: {
-      title: 'Tutorials',
+      title: 'Notes',
       subtitle: 'Technical notes and development insights.',
-      emptyTitle: 'Content coming soon',
-      emptyBody: 'Technical articles and tutorials will be published here soon.',
+      emptyTitle: 'In preparation',
+      emptyBody: 'Technical notes will be published here soon.',
     },
 
     contact: {
       title: 'Contact',
-      subtitle: 'For collaboration, a project, technical advice, or a role — I’d be glad to hear from you.',
+      subtitle: 'Available for collaboration, a project, technical advice, or a role — glad to hear from you.',
       responseTag: '200 OK',
       cta: 'Send an email',
       copied: 'Copied',
@@ -384,7 +401,7 @@ export const translations = {
     },
 
     footer: {
-      rights: 'Built from scratch, no template.',
+      rights: 'Built from the ground up, no template.',
       built: 'React + Vite',
     },
 
@@ -400,22 +417,32 @@ export const translations = {
     dir: 'ltr',
 
     nav: {
-      home: 'Startseite',
+      home: 'Start',
       about: 'Über mich',
       projects: 'Projekte',
       skills: 'Fähigkeiten',
-      tutorials: 'Tutorials',
+      tutorials: 'Notizen',
       contact: 'Kontakt',
     },
 
+    brand: 'Erfan Mohammadi',
+
+    boot: [
+      'Umgebung wird gestartet',
+      'Module werden geladen: react · router · svg',
+      'Verbindung zum Profildienst',
+      'GET /profile — 200 OK',
+      'bereit.',
+    ],
+
     hero: {
-      eyebrow: 'Verfügbar für Zusammenarbeit',
+      status: 'Verfügbar für Projekte und Zusammenarbeit',
       name: 'Erfan Mohammadi',
-      role: 'Software Engineer — Backend & Full Stack',
+      role: 'Software Engineer — mit Schwerpunkt Backend und Full-Stack-Architektur',
       tagline:
-        'Ich baue Systeme, die unter echter Last stabil bleiben, und Oberflächen, die nicht wie eine Nebensache wirken. Diese Seite ist ein kleiner Beleg für beides.',
+        'Ich entwerfe und baue Softwaresysteme auf Unternehmensniveau — vom Datenmodell und der API bis zur Oberfläche. Der Fokus: Stabilität unter echter Last, saubere Architektur und verlässliche Auslieferung.',
       cta1: 'Projekte ansehen',
-      cta2: 'Kontakt aufnehmen',
+      cta2: 'Kontakt',
     },
 
     map: {
@@ -424,10 +451,10 @@ export const translations = {
       hint: 'Klick auf einen Knoten, um zum Bereich zu springen — oder öffne die Konsole und sende eine Anfrage.',
       openConsole: 'API-Konsole öffnen',
       nodes: {
-        'client': 'wer anfragt — über mich',
-        'api-gateway': 'Einstieg in die Arbeit — Projekte',
-        'auth-service': 'Zugang bekommen — Kontaktwege',
-        'ticket-service': 'ein echtes Projekt — Ticket-System',
+        'client': 'der Einstieg — Werdegang',
+        'api-gateway': 'Zugang zur Arbeit — Projekte',
+        'auth-service': 'der Zugangsweg — Kontaktmöglichkeiten',
+        'ticket-service': 'ein reales System — Ticket-Management',
         'ai-service': 'KI & Automatisierung — Fähigkeiten',
         'datastore': 'die Datenebene — Datenbanken',
       },
@@ -436,8 +463,7 @@ export const translations = {
     console: {
       title: 'API-Konsole',
       subtitle: 'Ruf dieses Portfolio wie eine API auf.',
-      hintPrefix: 'Befehle:',
-      prompt: 'erfan.dev',
+      prompt: '~/erfan',
       placeholder: 'Befehl eingeben und Enter drücken — z. B. GET /projects',
       welcome: 'Willkommen in der Konsole. Tippe "help" für die Befehlsliste.',
       close: 'Schließen',
@@ -448,69 +474,72 @@ export const translations = {
       routing: 'weiter zu',
       commands: {
         help: 'diese Liste anzeigen',
-        'GET /about': 'die "Über mich"-Zusammenfassung',
+        'GET /about': 'Werdegang und Schwerpunkt, zusammengefasst',
         'GET /projects': 'Projekte auflisten',
         'GET /projects/:slug': 'ein Projekt im Detail',
         'GET /skills': 'Fähigkeiten nach Bereich',
-        'POST /contact': 'Kontaktwege',
+        'POST /contact': 'Kontaktmöglichkeiten',
         whoami: 'Kurzvorstellung',
         open: 'eine Route öffnen — z. B. open /projects',
         clear: 'Bildschirm leeren',
       },
       whoami:
-        'Erfan Mohammadi — Software Engineer. Backend-orientiert, full-stack-fähig, allergisch gegen Vorlagen.',
+        'Erfan Mohammadi — Software Engineer mit Schwerpunkt Backend und Systemarchitektur; baut Unternehmens- und Full-Stack-Systeme.',
     },
 
     intro: {
       tag: 'Einführung',
-      title: 'Kurz vorgestellt',
+      title: 'Kurz gesagt: was ich mache',
       body:
-        'Ich entwerfe und entwickle Webanwendungen, individuelle Software und Automatisierungslösungen. Ziel ist immer ein Produkt, das den fachlichen Bedarf deckt und zugleich bei technischer Qualität, Leistung und Wartbarkeit besteht.',
-      cta: 'Mehr über mich',
+        'Ich arbeite an Webanwendungen, individueller Software und Automatisierung im Unternehmensumfeld. Was ich ausliefere, muss den fachlichen Bedarf genau abdecken und zugleich bei technischer Qualität, Leistung und langfristiger Wartbarkeit bestehen.',
+      cta: 'Vollständiger Werdegang',
     },
 
-    stats: { tag: 'Auf einen Blick', title: 'Die Kurzfassung' },
-    stack: { tag: 'Technologie', title: 'Werkzeuge & Technologien' },
+    stats: { tag: 'Auf einen Blick', title: 'Die fachliche Kurzfassung' },
+    stack: { tag: 'Technologie', title: 'Werkzeuge & Technologien, mit denen ich arbeite' },
 
     featured: {
       tag: 'Ausgewählte Arbeiten',
-      title: 'Ein paar Projekte, über die es sich zu reden lohnt.',
+      title: 'Ein paar Projekte, die eine Erklärung wert sind.',
       all: 'Alle Projekte ansehen',
     },
 
     testimonials: {
       tag: 'Zusammenarbeit',
-      title: 'Kunden- & Kollegenstimmen',
-      emptyTitle: 'Noch keine Stimmen',
-      emptyBody: 'Rückmeldungen von Kunden und Kollegen werden hier veröffentlicht, sobald weitere Projekte abgeschlossen sind.',
+      title: 'Rückmeldungen von Kolleg:innen und Kund:innen',
+      emptyTitle: 'Demnächst',
+      emptyBody: 'Rückmeldungen von Kolleg:innen und Kund:innen erscheinen hier, sobald weitere Projekte veröffentlicht sind.',
     },
 
     about: {
       title: 'Über mich',
-      subtitle: 'Ein kurzer Weg von Desktop und Datenbanken hin zu Web und KI.',
+      subtitle: 'Von Data Engineering und Desktop-Systemen zu Web-Architektur und KI.',
       intro:
-        'Ich bin Software Engineer und arbeite an der Konzeption und Entwicklung von Webanwendungen, individueller Software und Prozessautomatisierung.\n\nIn Projekten lege ich Wert auf Architektur, Umsetzungsqualität, Sicherheit, Dokumentation und Wartbarkeit — damit ein Produkt den heutigen Bedarf deckt und morgen noch erweiterbar und wartbar ist.\n\nKontinuierliches Lernen, aktuelle Technologien und das Teilen von Wissen durch Schreiben und Lehren sind Teil meiner Arbeit.',
-      timelineTag: 'Weg',
+        'Software Engineer mit Schwerpunkt auf Konzeption, Entwicklung und Auslieferung von Webanwendungen, individueller Software und unternehmensweiter Prozessautomatisierung.\n\nBei jedem Projekt sind Architektur, Umsetzungsqualität, Sicherheit, Dokumentation und Wartbarkeit für mich nicht verhandelbar — damit das Produkt den heutigen Bedarf deckt und langfristig erweiterbar und wartbar bleibt.\n\nKontinuierliches Lernen, aktuelle Technologien und Wissensvermittlung durch Schreiben und Lehren gehören fest zu meiner Arbeitsweise.',
+      timelineTag: 'Werdegang',
       timeline: [
         {
-          time: 'Start',
-          title: 'Desktop- & Datenbankprogrammierung',
+          time: 'Grundlage',
+          title: 'Data Engineering & Desktop-Systeme',
           body:
-            'Begonnen habe ich mit Desktop-Anwendungen und Datenbanken — VB.NET, Windows Forms, Reporting und T-SQL auf SQL Server. Dort habe ich gelernt: ein korrektes Datenmodell ist die halbe Arbeit.',
+            'Entwicklung von Desktop- und Datenbanksoftware im Unternehmensumfeld — intensive Arbeit mit SQL Server, Stored Procedures, Query-Optimierung und Reporting. Mein heutiger Blick auf Datenmodellierung ist hier entstanden.',
         },
         {
-          time: 'Übergang',
-          title: 'Wechsel zu Web und Backend',
+          time: 'Erweiterung',
+          title: 'Wechsel zu Web und API-Design',
           body:
-            'Von Desktop-Formularen zu APIs und Web: Python, Django, REST-Design — und die Sicht, dass ein schneller Endpunkt wenig wert ist, wenn die Oberfläche billig wirkt.',
+            'Von Desktop-Software zu Services und Web — Entwicklung mit Python und Django und Entwurf von REST-APIs mit Blick auf Vertrag, Versionierung und Sicherheit. Interaktion und UI wurden in dieser Zeit Teil des Engineering-Auftrags.',
         },
         {
           time: 'jetzt',
-          title: 'Full Stack, Architektur und KI',
+          title: 'Full-Stack-Architektur & KI-Integration',
           body:
-            'Heute konzentriere ich mich auf Unternehmenssoftware, datengetriebene Systeme und Full-Stack-Arbeit und bringe KI-Dienste in den Workflow — mit Fokus auf Clean Code und Architektur.',
+            'Fokus auf datengetriebene Full-Stack-Systeme, Entwurf von Service-Architektur und die Einbindung von KI-Diensten in reale Workflows — bei konsequentem Clean Code und Engineering-Prinzipien.',
         },
       ],
+      nowTag: '// jetzt',
+      now:
+        'Arbeit an datengetriebenen Unternehmenssystemen, Verfeinerung von Architekturmustern in Full-Stack-Projekten und Ergänzung realer Workflows um KI-gestützte Funktionen.',
       detailsTag: 'Details',
       labels: {
         name: 'Name',
@@ -545,25 +574,25 @@ export const translations = {
       emptyBody: 'Die vollständige Liste folgt.',
       categories: {
         frontend: { title: 'Frontend-Entwicklung', description: 'Moderne, responsive und zugängliche Oberflächen.' },
-        backend: { title: 'Backend-Entwicklung', description: 'APIs, Geschäftslogik und serverseitige Anwendungen.' },
+        backend: { title: 'Backend-Entwicklung', description: 'API-Design, Geschäftslogik und serverseitige Services.' },
         database: { title: 'Datenbanksysteme', description: 'Entwurf, Modellierung und Optimierung relationaler Datenbanken.' },
         ai: { title: 'KI & Automatisierung', description: 'Integration von KI-Diensten und Automatisierung von Abläufen.' },
         enterprise: { title: 'Unternehmenssoftware', description: 'Individuelle Geschäftsanwendungen und interne Systeme.' },
-        tools: { title: 'Entwicklungswerkzeuge', description: 'Werkzeuge und Umgebungen im gesamten Entwicklungsprozess.' },
+        tools: { title: 'Entwicklungswerkzeuge', description: 'Werkzeuge und Umgebungen über den gesamten Entwicklungszyklus.' },
         engineering: { title: 'Software Engineering', description: 'Architektur, Clean Code, Tests und Wartung.' },
       },
     },
 
     tutorials: {
-      title: 'Tutorials',
+      title: 'Notizen',
       subtitle: 'Technische Notizen und Erfahrungen aus der Entwicklung.',
-      emptyTitle: 'Inhalte folgen',
-      emptyBody: 'Fachartikel und Tutorials werden hier bald veröffentlicht.',
+      emptyTitle: 'In Vorbereitung',
+      emptyBody: 'Technische Notizen werden hier bald veröffentlicht.',
     },
 
     contact: {
       title: 'Kontakt',
-      subtitle: 'Für Zusammenarbeit, ein Projekt, technische Beratung oder eine Stelle — ich höre gern von Ihnen.',
+      subtitle: 'Verfügbar für Zusammenarbeit, ein Projekt, technische Beratung oder eine Stelle — ich höre gern von Ihnen.',
       responseTag: '200 OK',
       cta: 'E-Mail senden',
       copied: 'Kopiert',
@@ -587,7 +616,7 @@ export const translations = {
       code: '404',
       title: 'Diese Route ist nicht definiert',
       body: 'Die Seite wurde vielleicht verschoben oder die Adresse stimmt nicht ganz.',
-      back: 'Zurück zur Startseite',
+      back: 'Zurück zum Start',
     },
   },
 }

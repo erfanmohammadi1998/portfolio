@@ -7,15 +7,15 @@ export const profile = {
 
   name: { fa: 'عرفان محمدی', en: 'Erfan Mohammadi', de: 'Erfan Mohammadi' },
   role: {
-    fa: 'مهندس نرم‌افزار — بک‌اند و فول‌استک',
-    en: 'Software Engineer — Backend & Full Stack',
-    de: 'Software Engineer — Backend & Full Stack',
+    fa: 'مهندس نرم‌افزار؛ بک‌اند و معماری فول‌استک',
+    en: 'Software Engineer — backend & full-stack architecture',
+    de: 'Software Engineer — Backend & Full-Stack-Architektur',
   },
   location: { fa: 'تهران، ایران', en: 'Tehran, Iran', de: 'Teheran, Iran' },
   availability: {
-    fa: 'در دسترس برای همکاری و پروژه‌های جدید',
-    en: 'Available for collaboration and new projects',
-    de: 'Verfügbar für Zusammenarbeit und neue Projekte',
+    fa: 'در دسترس برای پروژه و همکاری',
+    en: 'Available for projects and collaboration',
+    de: 'Verfügbar für Projekte und Zusammenarbeit',
   },
 
   email: 'erfan.mohammadi.alv77@gmail.com',
