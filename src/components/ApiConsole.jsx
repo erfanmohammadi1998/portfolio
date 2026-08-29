@@ -169,8 +169,7 @@ export default function ApiConsole() {
           data: projects.map((p) => ({
             slug: p.slug,
             title: tx(p.title),
-            kind: tx(p.kind),
-            year: p.year,
+            private: !!p.private,
             stack: p.stack,
           })),
           to: 'projects',
@@ -189,8 +188,7 @@ export default function ApiConsole() {
           data: {
             slug: p.slug,
             title: tx(p.title),
-            kind: tx(p.kind),
-            year: p.year,
+            private: !!p.private,
             problem: tx(p.problem),
             approach: tx(p.approach),
             result: tx(p.result),
