@@ -37,6 +37,7 @@ export default function Projects() {
                     <span className="proj-tagline" dir="auto">{tx(p.tagline)}</span>
                   </span>
                   <span className="proj-meta">
+                    {p.private && <span className="proj-private">{L.private}</span>}
                     <span className="proj-kind">{tx(p.kind)}</span>
                     <span className="proj-year">{p.year}</span>
                     <span className="proj-caret" aria-hidden="true">{isOpen ? '−' : '+'}</span>
@@ -76,6 +77,7 @@ export default function Projects() {
                           {L.demo} ↗
                         </a>
                       )}
+                      {p.private && <span className="proj-private-note">{L.privateNote}</span>}
                     </div>
                   </div>
                 )}
