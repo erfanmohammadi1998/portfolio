@@ -31,16 +31,16 @@ en / de, RTL-aware.
 
 ## Next
 
-- [ ] **Confirm LinkedIn handle.** Data uses `linkedin.com/in/erfan-mohammadi77`
-      (`src/data/profile.js`) — verify it's current, update if the handle changed.
-- [ ] **Testimonials.** Section is hidden while `src/data/testimonials.js` is
-      empty. Add real quotes (author, role, fa/en/de) to switch it on.
-- [ ] **Tutorials / Notes.** `src/data/tutorials.js` is empty and the page shows
-      an empty state. Add articles when there are any.
-- [ ] **Project screenshots.** Cards have no imagery — repos have none yet.
-      Add images to `public/` and a `cover` field per project when available.
+- [ ] **Project screenshots.** Cards have no imagery yet. When images arrive:
+      drop them in `public/`, add a `cover` field per project in
+      `src/data/projects.js`, and render it on the project cards.
 - [ ] **`cv-management-system` repo** has no README on GitHub — write one
       (needs `gh` or push access to that repo).
 - [ ] **GitHub repo metadata** — set description + topics on the `portfolio`
       repo; point the "About" website field at erfanmohammadi.ir (needs `gh`).
 - [ ] Optional: native German copy review.
+
+## Decided / closed
+
+- LinkedIn handle `linkedin.com/in/erfan-mohammadi77` confirmed current — keep.
+- Testimonials section removed (no real quotes; will not fake them).
