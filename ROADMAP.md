@@ -12,16 +12,31 @@ like a JSON endpoint. Deployed to GitHub Pages at https://erfanmohammadi.ir
 via `.github/workflows/deploy.yml` on push to `main`. Languages: fa (default) /
 en / de, RTL-aware.
 
+## Positioning
+
+**Python Backend Developer · Databases.** Copy leads with backend, API design,
+and databases — not "full-stack architecture". Keep it plain: no library lists
+in prose, no internal table names, no "built from scratch / no template"
+bragging, no self-congratulation.
+
+## Done (2026-08, pass 4)
+
+- Repositioned to Python backend + databases across fa/en/de (role, hero,
+  about, timeline, meta, JSON-LD).
+- Projects: card grid with generated schematic covers (`ProjectCover.jsx` from
+  each project's `arch` labels). Dropped year and kind labels. Descriptions
+  rewritten to plain outcome language.
+- Notes/tutorials section removed entirely.
+- Footer trimmed to the name + contact links.
+- Stack / skills / services lists curated to what's actually evidenced.
+- 7 projects, 5 public + 2 private (`private: true`, lock badge, on-request
+  note). No fabricated projects.
+
 ## Done (2026-08, pass 3)
 
-- All GitHub repos surfaced as projects — 5 public + 2 private
-  (`language-school-platform`, `enterprise-asset-valuation`), 7 total. Private
-  ones carry `private: true`, no code link, an "on request" note.
-- Every project writeup rewritten against the actual repo (models, settings,
-  package.json) — not guesses.
-- New "What I do" services section (`src/data/services.js`) + `GET /services`
-  console endpoint.
-- No fabricated projects — everything maps to a real repo.
+- All GitHub repos surfaced as projects; "What I do" services section +
+  `GET /services` console endpoint.
+- Every project writeup checked against the actual cloned repo.
 
 ## Done (2026-08)
 
