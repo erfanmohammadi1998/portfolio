@@ -1,59 +1,59 @@
-// Capability areas, each backed by shipped work. Rendered on the home page and
-// returned by GET /services. Keep these plain — no library lists, no jargon.
+// Areas of expertise, each backed by delivered work. Shown on the home page
+// and returned by GET /services. Formal, concrete, no library lists.
 
 export const services = [
   {
     key: 'api',
-    title: { fa: 'طراحی API و بک‌اند', en: 'API & backend', de: 'API & Backend' },
+    title: { fa: 'توسعه‌ی بک‌اند و API', en: 'Backend & API development', de: 'Backend- & API-Entwicklung' },
     body: {
-      fa: 'توسعه‌ی APIهای REST با Django؛ احراز هویت، نقش‌ها، صفحه‌بندی و فیلتر. از مدل داده تا مستندسازی.',
-      en: 'REST APIs with Django — auth, roles, pagination, and filtering. From the data model to the docs.',
-      de: 'REST-APIs mit Django — Auth, Rollen, Pagination und Filter. Vom Datenmodell bis zur Doku.',
+      fa: 'طراحی و توسعه‌ی APIهای REST با Django؛ احراز هویت، سطوح دسترسی، صفحه‌بندی، فیلتر و مستندسازی خودکار.',
+      en: 'Designing and building REST APIs with Django: authentication, access levels, pagination, filtering, and generated docs.',
+      de: 'Entwurf und Bau von REST-APIs mit Django: Authentifizierung, Zugriffsebenen, Pagination, Filter und generierte Doku.',
     },
   },
   {
     key: 'database',
-    title: { fa: 'طراحی پایگاه داده', en: 'Database design', de: 'Datenbankdesign' },
+    title: { fa: 'طراحی و مدیریت پایگاه داده', en: 'Database design & administration', de: 'Datenbankdesign & -administration' },
     body: {
-      fa: 'طراحی و مدل‌سازی پایگاه داده‌ی رابطه‌ای، بهینه‌سازی کوئری، و کار با پایگاه‌داده‌های موجود.',
-      en: 'Designing and modeling relational databases, optimizing queries, and working with databases already in place.',
-      de: 'Relationale Datenbanken entwerfen und modellieren, Queries optimieren und mit bestehenden Datenbanken arbeiten.',
+      fa: 'طراحی مدل داده‌ی رابطه‌ای، مدیریت و بهینه‌سازی SQL Server، کوئری‌نویسی پیشرفته و کار با پایگاه‌داده‌های موجود.',
+      en: 'Relational data modeling, SQL Server administration and tuning, advanced query work, and integrating with existing databases.',
+      de: 'Relationale Datenmodellierung, SQL-Server-Administration und -Tuning, fortgeschrittene Query-Arbeit und Integration bestehender Datenbanken.',
+    },
+  },
+  {
+    key: 'systems',
+    title: { fa: 'سامانه‌های مدیریتی اختصاصی', en: 'Custom management systems', de: 'Individuelle Managementsysteme' },
+    body: {
+      fa: 'توسعه‌ی سامانه‌های اختصاصی متناسب با فرایند کسب‌وکار: مدیریت، حسابداری، CRM، فروش و گردش‌کار.',
+      en: 'Systems built around the business process: management, accounting, CRM, sales, and workflow.',
+      de: 'Systeme, die um den Geschäftsprozess herum gebaut sind: Management, Buchhaltung, CRM, Vertrieb und Workflow.',
+    },
+  },
+  {
+    key: 'bi',
+    title: { fa: 'هوش تجاری و گزارش‌سازی', en: 'BI & reporting', de: 'BI & Reporting' },
+    body: {
+      fa: 'داشبورد مدیریتی و گزارش‌های تحلیلی با Power BI و SSIS؛ استخراج و آماده‌سازی داده از منابع مختلف.',
+      en: 'Management dashboards and analytical reports with Power BI and SSIS; extracting and preparing data from multiple sources.',
+      de: 'Management-Dashboards und analytische Berichte mit Power BI und SSIS; Extraktion und Aufbereitung von Daten aus verschiedenen Quellen.',
     },
   },
   {
     key: 'integration',
-    title: { fa: 'یکپارچه‌سازی با سیستم‌های موجود', en: 'Legacy integration', de: 'Integration von Altsystemen' },
+    title: { fa: 'یکپارچه‌سازی و استقرار', en: 'Integration & deployment', de: 'Integration & Deployment' },
     body: {
-      fa: 'ساختن رابط و API وب روی پایگاه‌داده‌ها و سیستم‌های موجود، بدون نیاز به مهاجرت داده یا بازنویسی از صفر.',
-      en: 'Putting a web and API layer over existing databases and systems, with no data migration and no rewrite.',
-      de: 'Eine Web- und API-Schicht über bestehende Datenbanken und Systeme legen — ohne Datenmigration, ohne Neuschreiben.',
-    },
-  },
-  {
-    key: 'automation',
-    title: { fa: 'اتوماسیون و پردازش داده', en: 'Automation & data', de: 'Automatisierung & Daten' },
-    body: {
-      fa: 'اسکریپت‌ها و سرویس‌هایی که کار تکراری را حذف می‌کنند: پردازش دوره‌ای و جمع‌آوری داده از منابع بیرونی.',
-      en: 'Scripts and services that remove repetitive work: periodic processing and pulling data from outside sources.',
-      de: 'Skripte und Dienste, die wiederkehrende Arbeit abnehmen: periodische Verarbeitung und Datenabruf aus externen Quellen.',
-    },
-  },
-  {
-    key: 'reporting',
-    title: { fa: 'گزارش و تولید سند', en: 'Reporting & documents', de: 'Berichte & Dokumente' },
-    body: {
-      fa: 'گزارش‌های مالی و عملیاتی با خروجی اکسل، و تولید PDF (گواهی، فاکتور) با پشتیبانی درست از متن فارسی.',
-      en: 'Financial and operational reports with Excel export, and PDF generation (certificates, invoices) with correct Persian text.',
-      de: 'Finanz- und Betriebsberichte mit Excel-Export und PDF-Erzeugung (Zertifikate, Rechnungen) mit korrektem persischem Text.',
+      fa: 'اتصال سامانه‌ها به یکدیگر و به سرویس‌های بیرونی، و استقرار پروژه‌ها روی محیط‌های مبتنی بر Docker.',
+      en: 'Connecting systems to each other and to external services, and deploying projects on Docker-based environments.',
+      de: 'Systeme miteinander und mit externen Diensten verbinden und Projekte auf Docker-basierten Umgebungen bereitstellen.',
     },
   },
   {
     key: 'ai',
-    title: { fa: 'ادغام هوش مصنوعی', en: 'AI integration', de: 'KI-Integration' },
+    title: { fa: 'اتوماسیون و راهکارهای هوشمند', en: 'Automation & intelligent solutions', de: 'Automatisierung & intelligente Lösungen' },
     body: {
-      fa: 'آوردن سرویس‌های هوش مصنوعی به گردش‌کار موجود، جایی که یک تصمیم یا یک متن را واقعاً سریع‌تر می‌کند.',
-      en: 'Bringing AI services into an existing workflow, where they genuinely speed up a decision or a piece of text.',
-      de: 'KI-Dienste in bestehende Workflows bringen, wo sie eine Entscheidung oder einen Text wirklich beschleunigen.',
+      fa: 'خودکارسازی فرایندهای تکراری و ادغام سرویس‌های هوش مصنوعی در جریان کار، جایی که ارزش عملی دارد.',
+      en: 'Automating repetitive processes and bringing AI services into the workflow where they deliver practical value.',
+      de: 'Automatisierung wiederkehrender Prozesse und Einbindung von KI-Diensten in den Workflow, wo sie praktischen Nutzen bringen.',
     },
   },
 ]

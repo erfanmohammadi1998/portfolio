@@ -1,12 +1,15 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import Reveal from '../components/Reveal'
 import { profile } from '../data/profile'
+import { resume } from '../data/resume'
 
 export default function About() {
-  const { t, tx } = useLanguage()
+  const { lang, t, tx } = useLanguage()
   const paragraphs = t('about.intro').split('\n\n')
   const timeline = t('about.timeline')
   const L = t('about.labels')
+  const rl = lang === 'de' ? 'en' : lang
 
   const details = [
     { k: L.name, v: tx(profile.name) },
@@ -56,8 +59,60 @@ export default function About() {
           <div className="about-side-links">
             <a href={profile.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
             <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <Link to={`/${lang}/resume`}>{t('nav.resume')} ↗</Link>
           </div>
         </aside>
+      </div>
+
+      <div className="about-blocks">
+        <Reveal className="about-block">
+          <span className="section-tag">// {t('about.experienceTag')}</span>
+          <div className="ab-list">
+            {resume.experience.map((e, i) => (
+              <div className="ab-item" key={i}>
+                <div className="ab-item-head">
+                  <h3 dir="auto">{e.role[rl]}</h3>
+                  <span className="ab-period" dir="auto">{e.period[rl]}</span>
+                </div>
+                <span className="ab-org" dir="auto">{e.company[rl]}</span>
+                <ul>
+                  {e.bullets.map((b, j) => (
+                    <li key={j} dir="auto">{b[rl]}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal className="about-block">
+          <span className="section-tag">// {t('about.educationTag')}</span>
+          <div className="ab-list">
+            {resume.education.map((e, i) => (
+              <div className="ab-item" key={i}>
+                <div className="ab-item-head">
+                  <h3 dir="auto">{e.degree[rl]}</h3>
+                  <span className="ab-period" dir="auto">{e.period[rl]}</span>
+                </div>
+                <span className="ab-org" dir="auto">{e.school[rl]}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal className="about-block">
+          <span className="section-tag">// {t('about.coursesTag')}</span>
+          <ul className="ab-courses">
+            {resume.courses.map((c, i) => (
+              <li key={i}>
+                <span>{c.title}</span>
+                <span className="ab-course-meta" dir="ltr">
+                  {c.provider} · {c.hours}h · {c.year}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
 
       <div className="timeline">
