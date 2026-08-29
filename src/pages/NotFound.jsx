@@ -13,8 +13,8 @@ export default function NotFound() {
 }`}
       </pre>
       <h1>{t('notFound.code')}</h1>
-      <p>{t('notFound.title')}</p>
-      <p className="nf-body">{t('notFound.body')}</p>
+      <p dir="auto">{t('notFound.title')}</p>
+      <p className="nf-body" dir="auto">{t('notFound.body')}</p>
       <Link className="btn btn-primary" to={`/${lang}`}>
         {t('notFound.back')} →
       </Link>

@@ -7,6 +7,12 @@ export default function Reveal({ children, className = '', delay = 0, as: Tag = 
   useEffect(() => {
     const el = ref.current
     if (!el) return
+
+    if (typeof IntersectionObserver === 'undefined') {
+      setVisible(true)
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -14,10 +20,17 @@ export default function Reveal({ children, className = '', delay = 0, as: Tag = 
           observer.unobserve(el)
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
     )
     observer.observe(el)
-    return () => observer.disconnect()
+
+    // Safety net: never leave content hidden if the observer never fires.
+    const fallback = setTimeout(() => setVisible(true), 1600)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallback)
+    }
   }, [])
 
   return (

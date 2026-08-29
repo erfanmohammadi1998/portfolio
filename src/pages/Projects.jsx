@@ -13,8 +13,8 @@ export default function Projects() {
     <section className="container section">
       <div className="section-head">
         <span className="section-tag">// {t('projects.title')}</span>
-        <h2>{t('projects.title')}</h2>
-        <p>{t('projects.subtitle')}</p>
+        <h2 dir="auto">{t('projects.title')}</h2>
+        <p dir="auto">{t('projects.subtitle')}</p>
       </div>
 
       {projects.length === 0 ? (
@@ -33,8 +33,8 @@ export default function Projects() {
                 >
                   <span className="proj-index">{String(i + 1).padStart(2, '0')}</span>
                   <span className="proj-head">
-                    <span className="proj-title">{tx(p.title)}</span>
-                    <span className="proj-tagline">{tx(p.tagline)}</span>
+                    <span className="proj-title" dir="auto">{tx(p.title)}</span>
+                    <span className="proj-tagline" dir="auto">{tx(p.tagline)}</span>
                   </span>
                   <span className="proj-meta">
                     <span className="proj-kind">{tx(p.kind)}</span>
@@ -47,15 +47,15 @@ export default function Projects() {
                   <div className="proj-detail">
                     <div className="proj-row">
                       <span className="proj-label">{L.problem}</span>
-                      <p>{tx(p.problem)}</p>
+                      <p dir="auto">{tx(p.problem)}</p>
                     </div>
                     <div className="proj-row">
                       <span className="proj-label">{L.approach}</span>
-                      <p>{tx(p.approach)}</p>
+                      <p dir="auto">{tx(p.approach)}</p>
                     </div>
                     <div className="proj-row">
                       <span className="proj-label">{L.result}</span>
-                      <p>{tx(p.result)}</p>
+                      <p dir="auto">{tx(p.result)}</p>
                     </div>
                     <div className="proj-row">
                       <span className="proj-label">{L.stack}</span>

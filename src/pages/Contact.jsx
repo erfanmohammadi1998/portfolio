@@ -8,12 +8,12 @@ export default function Contact() {
   const [copied, setCopied] = useState(null)
 
   const rows = [
-    { key: 'email', label: L.email, value: profile.email, href: `mailto:${profile.email}`, copy: profile.email },
-    { key: 'phone', label: L.phone, value: profile.phoneDisplay, href: `tel:${profile.phone}`, copy: profile.phone, ltr: true },
+    { key: 'email', label: L.email, value: profile.email, href: `mailto:${profile.email}`, copy: profile.email, mono: true },
+    { key: 'phone', label: L.phone, value: profile.phoneDisplay, href: `tel:${profile.phone}`, copy: profile.phone, ltr: true, mono: true },
     { key: 'location', label: L.location, value: tx(profile.location) },
-    { key: 'github', label: L.github, value: 'github.com/erfanmohammadi1998', href: profile.links.github },
-    { key: 'linkedin', label: L.linkedin, value: 'linkedin.com/in/erfan-mohammadi77', href: profile.links.linkedin },
-    { key: 'website', label: L.website, value: 'erfanmohammadi.ir', href: profile.links.website },
+    { key: 'github', label: L.github, value: 'github.com/erfanmohammadi1998', href: profile.links.github, mono: true },
+    { key: 'linkedin', label: L.linkedin, value: 'linkedin.com/in/erfan-mohammadi77', href: profile.links.linkedin, mono: true },
+    { key: 'website', label: L.website, value: 'erfanmohammadi.ir', href: profile.links.website, mono: true },
   ]
 
   async function copy(key, text) {
@@ -30,21 +30,21 @@ export default function Contact() {
     <section className="container section">
       <div className="section-head">
         <span className="section-tag">// {t('contact.title')}</span>
-        <h2>{t('contact.title')}</h2>
-        <p>{t('contact.subtitle')}</p>
+        <h2 dir="auto">{t('contact.title')}</h2>
+        <p dir="auto">{t('contact.subtitle')}</p>
       </div>
 
       <div className="response">
-        <div className="response-bar">
+        <div className="response-bar" dir="ltr">
           <span className="response-status">{t('contact.responseTag')}</span>
-          <span className="response-path" dir="ltr">GET /contact</span>
+          <span className="response-path">GET /contact</span>
         </div>
 
         <dl className="response-body">
           {rows.map((r) => (
             <div className="response-row" key={r.key}>
-              <dt>{r.label}</dt>
-              <dd dir={r.ltr ? 'ltr' : undefined}>
+              <dt dir="auto">{r.label}</dt>
+              <dd className={r.mono ? 'is-mono' : ''} dir={r.ltr ? 'ltr' : 'auto'}>
                 {r.href ? (
                   <a href={r.href} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
                     {r.value}

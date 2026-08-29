@@ -24,11 +24,11 @@ export default function Home() {
         <div className="container">
           <div className="hero-copy fade-up">
             <span className="eyebrow">
-              <span className="eyebrow-dot" aria-hidden="true" /> {t('hero.eyebrow')}
+              <span className="eyebrow-dot" aria-hidden="true" /> {t('hero.status')}
             </span>
-            <h1>{t('hero.name')}</h1>
-            <p className="role">{t('hero.role')}</p>
-            <p className="tagline">{t('hero.tagline')}</p>
+            <h1 dir="auto">{t('hero.name')}</h1>
+            <p className="role" dir="auto">{t('hero.role')}</p>
+            <p className="tagline" dir="auto">{t('hero.tagline')}</p>
             <div className="hero-actions">
               <Magnetic>
                 <Link className="btn btn-primary" to={`/${lang}/projects`}>
@@ -41,13 +41,22 @@ export default function Home() {
                 </Link>
               </Magnetic>
             </div>
+            <p className="hero-meta" dir="ltr">
+              <span>response&nbsp;&lt;&nbsp;24h</span>
+              <span className="hero-meta-sep">·</span>
+              <span>Tehran · UTC+3:30</span>
+              <span className="hero-meta-sep">·</span>
+              <button type="button" className="hero-meta-btn" onClick={openConsole}>
+                {'>_'} Ctrl&nbsp;+&nbsp;K
+              </button>
+            </p>
           </div>
 
           <div className="map-block fade-up" style={{ animationDelay: '120ms' }}>
             <div className="map-head">
               <span className="section-tag">{t('map.tag')}</span>
-              <h2>{t('map.title')}</h2>
-              <p className="map-hint">{t('map.hint')}</p>
+              <h2 dir="auto">{t('map.title')}</h2>
+              <p className="map-hint" dir="auto">{t('map.hint')}</p>
             </div>
             <SystemMap />
             <button type="button" className="btn btn-ghost btn-sm map-console-btn" onClick={openConsole}>
@@ -62,8 +71,8 @@ export default function Home() {
       <Reveal as="section" className="container section">
         <span className="section-tag">{t('intro.tag')}</span>
         <div className="intro">
-          <h2>{t('intro.title')}</h2>
-          <p>{t('intro.body')}</p>
+          <h2 dir="auto">{t('intro.title')}</h2>
+          <p dir="auto">{t('intro.body')}</p>
           <Link className="btn btn-ghost btn-sm" to={`/${lang}/about`}>
             {t('intro.cta')}
           </Link>
@@ -73,13 +82,13 @@ export default function Home() {
       <Reveal as="section" className="container section">
         <span className="section-tag">{t('stats.tag')}</span>
         <div className="section-head">
-          <h2>{t('stats.title')}</h2>
+          <h2 dir="auto">{t('stats.title')}</h2>
         </div>
         <dl className="kv-grid">
           {stats.map((s) => (
             <div className="kv-card" key={s.key}>
-              <dt>{tx(s.label)}</dt>
-              <dd>{tx(s.value)}</dd>
+              <dt dir="auto">{tx(s.label)}</dt>
+              <dd dir="auto">{tx(s.value)}</dd>
             </div>
           ))}
         </dl>
@@ -88,7 +97,7 @@ export default function Home() {
       <Reveal as="section" className="container section">
         <span className="section-tag">{t('featured.tag')}</span>
         <div className="section-head">
-          <h2>{t('featured.title')}</h2>
+          <h2 dir="auto">{t('featured.title')}</h2>
         </div>
         <div className="feat-grid">
           {featured.map((p) => (
@@ -97,8 +106,8 @@ export default function Home() {
                 <span className="feat-kind">{tx(p.kind)}</span>
                 <span className="feat-year">{p.year}</span>
               </div>
-              <h3>{tx(p.title)}</h3>
-              <p>{tx(p.tagline)}</p>
+              <h3 dir="auto">{tx(p.title)}</h3>
+              <p dir="auto">{tx(p.tagline)}</p>
               <div className="stack-list">
                 {p.stack.slice(0, 4).map((s) => (
                   <span className="stack-chip sm" key={s}>{s}</span>
@@ -115,7 +124,7 @@ export default function Home() {
       <Reveal as="section" className="container section">
         <span className="section-tag">{t('stack.tag')}</span>
         <div className="section-head">
-          <h2>{t('stack.title')}</h2>
+          <h2 dir="auto">{t('stack.title')}</h2>
         </div>
         <div className="stack-list">
           {stack.map((item) => (
@@ -128,12 +137,12 @@ export default function Home() {
         <Reveal as="section" className="container section">
           <span className="section-tag">{t('testimonials.tag')}</span>
           <div className="section-head">
-            <h2>{t('testimonials.title')}</h2>
+            <h2 dir="auto">{t('testimonials.title')}</h2>
           </div>
           <div className="grid">
             {testimonials.map((tst) => (
               <blockquote className="card testimonial" key={tst.author}>
-                <p>&ldquo;{tx(tst.quote)}&rdquo;</p>
+                <p dir="auto">&ldquo;{tx(tst.quote)}&rdquo;</p>
                 <footer>
                   <strong>{tst.author}</strong>
                   {tst.role ? <span> — {tst.role}</span> : null}
