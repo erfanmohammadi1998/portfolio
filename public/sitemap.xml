@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://erfanmohammadi.ir/fa</loc>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://erfanmohammadi.ir/fa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://erfanmohammadi.ir/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://erfanmohammadi.ir/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erfanmohammadi.ir/fa"/>
+  </url>
+  <url><loc>https://erfanmohammadi.ir/fa/about</loc></url>
+  <url><loc>https://erfanmohammadi.ir/fa/projects</loc></url>
+  <url><loc>https://erfanmohammadi.ir/fa/skills</loc></url>
+  <url><loc>https://erfanmohammadi.ir/fa/tutorials</loc></url>
+  <url><loc>https://erfanmohammadi.ir/fa/contact</loc></url>
+  <url><loc>https://erfanmohammadi.ir/en</loc></url>
+  <url><loc>https://erfanmohammadi.ir/en/about</loc></url>
+  <url><loc>https://erfanmohammadi.ir/en/projects</loc></url>
+  <url><loc>https://erfanmohammadi.ir/en/skills</loc></url>
+  <url><loc>https://erfanmohammadi.ir/en/tutorials</loc></url>
+  <url><loc>https://erfanmohammadi.ir/en/contact</loc></url>
+  <url><loc>https://erfanmohammadi.ir/de</loc></url>
+  <url><loc>https://erfanmohammadi.ir/de/about</loc></url>
+  <url><loc>https://erfanmohammadi.ir/de/projects</loc></url>
+  <url><loc>https://erfanmohammadi.ir/de/skills</loc></url>
+  <url><loc>https://erfanmohammadi.ir/de/tutorials</loc></url>
+  <url><loc>https://erfanmohammadi.ir/de/contact</loc></url>
+</urlset>
