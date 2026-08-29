@@ -8,7 +8,6 @@ import Magnetic from '../components/Magnetic'
 import { stats } from '../data/stats'
 import { stack } from '../data/stack'
 import { projects } from '../data/projects'
-import { testimonials } from '../data/testimonials'
 
 const marqueeItems = ['Python', 'Django', 'DRF', 'React', 'SQL Server', 'PostgreSQL', 'Docker', 'REST', 'Git', 'Linux']
 
@@ -132,26 +131,6 @@ export default function Home() {
           ))}
         </div>
       </Reveal>
-
-      {testimonials.length > 0 && (
-        <Reveal as="section" className="container section">
-          <span className="section-tag">{t('testimonials.tag')}</span>
-          <div className="section-head">
-            <h2 dir="auto">{t('testimonials.title')}</h2>
-          </div>
-          <div className="grid">
-            {testimonials.map((tst) => (
-              <blockquote className="card testimonial" key={tst.author}>
-                <p dir="auto">&ldquo;{tx(tst.quote)}&rdquo;</p>
-                <footer>
-                  <strong>{tst.author}</strong>
-                  {tst.role ? <span> — {tst.role}</span> : null}
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </Reveal>
-      )}
     </>
   )
 }

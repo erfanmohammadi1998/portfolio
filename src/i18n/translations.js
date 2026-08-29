@@ -90,13 +90,6 @@ export const translations = {
       all: 'دیدن همه‌ی نمونه‌کارها',
     },
 
-    testimonials: {
-      tag: 'همکاری‌ها',
-      title: 'بازخورد همکاران و کارفرمایان',
-      emptyTitle: 'به‌زودی',
-      emptyBody: 'بازخورد همکاران و کارفرمایان پس از انتشار پروژه‌های بیشتر در این بخش قرار می‌گیرد.',
-    },
-
     about: {
       title: 'درباره',
       subtitle: 'از مهندسی داده و سامانه‌های دسکتاپ تا معماری وب و هوش مصنوعی.',
@@ -297,13 +290,6 @@ export const translations = {
       all: 'See all projects',
     },
 
-    testimonials: {
-      tag: 'Collaboration',
-      title: 'Feedback from colleagues and clients',
-      emptyTitle: 'Coming soon',
-      emptyBody: 'Feedback from colleagues and clients will appear here as more projects are published.',
-    },
-
     about: {
       title: 'About',
       subtitle: 'From data engineering and desktop systems to web architecture and AI.',
@@ -502,13 +488,6 @@ export const translations = {
       tag: 'Ausgewählte Arbeiten',
       title: 'Ein paar Projekte, die eine Erklärung wert sind.',
       all: 'Alle Projekte ansehen',
-    },
-
-    testimonials: {
-      tag: 'Zusammenarbeit',
-      title: 'Rückmeldungen von Kolleg:innen und Kund:innen',
-      emptyTitle: 'Demnächst',
-      emptyBody: 'Rückmeldungen von Kolleg:innen und Kund:innen erscheinen hier, sobald weitere Projekte veröffentlicht sind.',
     },
 
     about: {

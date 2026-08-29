@@ -553,7 +553,7 @@ button:focus-visible {
 .stack-chip.sm { font-size: 0.75rem; padding: 4px 9px; }
 .stack-chip:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ============ Cards / grid / testimonials ============ */
+/* ============ Cards / grid ============ */
 
 .grid {
   display: grid;
@@ -566,8 +566,6 @@ button:focus-visible {
   border-radius: var(--radius);
   padding: 22px;
 }
-.testimonial p { color: var(--text); margin-block-end: 14px; }
-.testimonial footer { color: var(--text-muted); font-size: 0.86rem; }
 
 /* ============ Empty state ============ */
 
@@ -1234,7 +1232,6 @@ body.has-custom-cursor button { cursor: none; }
 [dir='rtl'] .proj-row p,
 [dir='rtl'] .feat-card p,
 [dir='rtl'] .skill-desc,
-[dir='rtl'] .testimonial p,
 [dir='rtl'] .contact .section-head p {
   unicode-bidi: plaintext;
   text-align: start;
