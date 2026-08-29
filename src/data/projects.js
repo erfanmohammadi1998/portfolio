@@ -18,9 +18,9 @@ export const projects = [
       de: 'Sprachschul-Plattform',
     },
     tagline: {
-      fa: 'مدیریت کامل یک آموزشگاه زبان در یک سامانه — از ثبت‌نام و کلاس تا آزمون، پرداخت، صدور گواهی و گزارش مالی.',
-      en: 'A whole language academy in one system — enrollment and classes through exams, payments, certificates, and financial reporting.',
-      de: 'Eine ganze Sprachakademie in einem System — von Anmeldung und Kursen bis zu Prüfungen, Zahlungen, Zertifikaten und Finanzberichten.',
+      fa: 'سامانه‌ی یکپارچه‌ی مدیریت آموزشگاه زبان؛ شامل ثبت‌نام، کلاس، آزمون، پرداخت، صدور گواهی و گزارش مالی.',
+      en: 'An integrated management system for a language academy: enrollment, classes, exams, payments, certificates, and financial reporting.',
+      de: 'Ein integriertes Managementsystem für eine Sprachakademie: Anmeldung, Kurse, Prüfungen, Zahlungen, Zertifikate und Finanzberichte.',
     },
     overview: {
       fa: 'یک پلتفرم وب که کل عملیات یک آموزشگاه زبان را در یک سامانه جمع می‌کند: پذیرش دانشجو، برنامه‌ی کلاس‌ها، آزمون آنلاین، پرداخت، کتابخانه‌ی ویدیو، صدور گواهی و گزارش مالی. همین کد می‌تواند برای یک آموزشگاه به‌صورت نصب مستقل اجرا شود، یا روی یک سرور چند آموزشگاه مستقل را با داده و برند جدا سرویس بدهد.',
@@ -146,6 +146,120 @@ export const projects = [
       de: 'Konzeption und Umsetzung von Backend und Bewertungsdienst; Mitarbeit am Frontend.',
     },
     stack: ['Django', 'REST API', 'SQL Server', 'React', 'Recharts'],
+    links: {},
+  },
+  {
+    slug: 'management-dashboard',
+    service: 'datastore',
+    private: true,
+    featured: true,
+    arch: ['sources', 'ETL', 'warehouse', 'dashboard'],
+    title: {
+      fa: 'داشبورد مدیریتی و تحلیل عملکرد سازمان',
+      en: 'Enterprise Management Dashboard & Analytics',
+      de: 'Management-Dashboard & Analytics',
+    },
+    tagline: {
+      fa: 'داشبورد مدیریتی برای پایش شاخص‌های کلیدی سازمان، با گردآوری و آماده‌سازی داده از چند منبع.',
+      en: 'A management dashboard for tracking the organization’s key metrics, with data gathered and prepared from several sources.',
+      de: 'Ein Management-Dashboard zur Verfolgung der wichtigsten Kennzahlen, mit Daten aus mehreren Quellen.',
+    },
+    overview: {
+      fa: 'یک داشبورد مدیریتی که شاخص‌های کلیدی واحدهای مختلف سازمان را در یک نما گرد می‌آورد. داده از سامانه‌های داخلی و پایگاه‌های داده‌ی مختلف استخراج، پاک‌سازی و در یک انبار داده‌ی مشترک آماده می‌شود تا گزارش‌ها همیشه از یک منبع واحد بیایند.',
+      en: 'A management dashboard that brings the key metrics of different business units into one view. Data is extracted from internal systems and databases, cleaned, and prepared in a shared data store so every report draws from one source.',
+      de: 'Ein Management-Dashboard, das die Kennzahlen verschiedener Geschäftsbereiche in einer Ansicht zusammenführt. Daten werden aus internen Systemen und Datenbanken extrahiert, bereinigt und in einem gemeinsamen Datenspeicher aufbereitet.',
+    },
+    problem: {
+      fa: 'گزارش‌های مدیریتی از منابع پراکنده و با تعریف‌های متفاوت تهیه می‌شد. مقایسه‌ی اعداد بین واحدها و اطمینان از درستی آن‌ها زمان‌بر بود.',
+      en: 'Management reports were produced from scattered sources with inconsistent definitions. Comparing numbers across units and trusting them took a lot of time.',
+      de: 'Management-Berichte entstanden aus verstreuten Quellen mit uneinheitlichen Definitionen. Zahlen über Bereiche hinweg zu vergleichen und ihnen zu vertrauen kostete viel Zeit.',
+    },
+    build: [
+      {
+        fa: 'فرایندهای استخراج و انتقال داده (ETL) با SSIS طراحی شد تا داده‌ی سامانه‌های مبدأ به‌صورت زمان‌بندی‌شده در یک انبار داده جمع شود.',
+        en: 'ETL processes were built with SSIS so data from the source systems lands in a data warehouse on a schedule.',
+        de: 'ETL-Prozesse wurden mit SSIS gebaut, sodass Daten aus den Quellsystemen geplant in ein Data Warehouse gelangen.',
+      },
+      {
+        fa: 'تعریف هر شاخص یک بار و در یک جا مشخص شد؛ گزارش‌ها و داشبوردهای Power BI روی همان مدل ساخته شدند.',
+        en: 'Each metric was defined once, in one place; the Power BI reports and dashboards were built on that model.',
+        de: 'Jede Kennzahl wurde einmal, an einer Stelle definiert; die Power-BI-Berichte und -Dashboards bauen darauf auf.',
+      },
+    ],
+    features: [
+      { fa: 'گردآوری داده از چند سامانه و پایگاه داده', en: 'Data from several systems and databases', de: 'Daten aus mehreren Systemen und Datenbanken' },
+      { fa: 'فرایند ETL زمان‌بندی‌شده', en: 'Scheduled ETL pipeline', de: 'Geplante ETL-Pipeline' },
+      { fa: 'تعریف واحد و یکسان برای هر شاخص', en: 'A single, shared definition per metric', de: 'Eine einheitliche Definition je Kennzahl' },
+      { fa: 'داشبورد و گزارش‌های Power BI', en: 'Power BI dashboards and reports', de: 'Power-BI-Dashboards und -Berichte' },
+    ],
+    result: {
+      fa: 'مدیریت یک نمای واحد و قابل‌اتکا از عملکرد سازمان دارد و گزارش‌ها دیگر با هم تناقض ندارند.',
+      en: 'Management has one reliable view of performance, and reports no longer contradict each other.',
+      de: 'Das Management hat eine verlässliche Sicht auf die Leistung, und Berichte widersprechen sich nicht mehr.',
+    },
+    role: {
+      fa: 'طراحی مدل داده، فرایند ETL و داشبوردها.',
+      en: 'Data model, ETL pipeline, and dashboard design.',
+      de: 'Datenmodell, ETL-Pipeline und Dashboard-Design.',
+    },
+    stack: ['SQL Server', 'SSIS', 'T-SQL', 'Power BI', 'Data warehousing'],
+    links: {},
+  },
+  {
+    slug: 'document-management',
+    service: 'cv-service',
+    private: true,
+    featured: false,
+    arch: ['upload', 'OCR', 'index', 'search'],
+    title: {
+      fa: 'سامانه‌ی مدیریت مستندات هوشمند',
+      en: 'Intelligent Document Management System',
+      de: 'Intelligentes Dokumentenmanagement-System',
+    },
+    tagline: {
+      fa: 'بایگانی و جست‌وجوی اسناد سازمانی، با استخراج متن از تصویر و PDF برای جست‌وجوی محتوایی.',
+      en: 'Archiving and searching organizational documents, with text extracted from images and PDFs for full-text search.',
+      de: 'Archivierung und Suche von Unternehmensdokumenten, mit Textextraktion aus Bildern und PDFs für Volltextsuche.',
+    },
+    overview: {
+      fa: 'سامانه‌ای برای بایگانی منظم اسناد سازمانی که علاوه بر نگهداری فایل، متن داخل اسناد اسکن‌شده و PDF را استخراج می‌کند تا جست‌وجو روی محتوای واقعی سند انجام شود، نه فقط نام فایل.',
+      en: 'A system for organized archiving of company documents that, beyond storing the file, extracts the text inside scanned documents and PDFs so search runs over the actual content, not just the file name.',
+      de: 'Ein System zur geordneten Archivierung von Firmendokumenten, das über die Ablage hinaus den Text in gescannten Dokumenten und PDFs extrahiert, damit die Suche über den echten Inhalt läuft.',
+    },
+    problem: {
+      fa: 'اسناد در پوشه‌های شبکه پخش بودند. پیدا کردن یک سند خاص به حافظه‌ی افراد وابسته بود و اسناد اسکن‌شده اصلاً قابل جست‌وجو نبودند.',
+      en: 'Documents were spread across network folders. Finding a specific one depended on people’s memory, and scanned documents were not searchable at all.',
+      de: 'Dokumente lagen verstreut in Netzwerkordnern. Ein bestimmtes zu finden hing vom Gedächtnis der Leute ab, und gescannte Dokumente waren gar nicht durchsuchbar.',
+    },
+    build: [
+      {
+        fa: 'هر سند هنگام بارگذاری دسته‌بندی و برچسب‌گذاری می‌شود. برای فایل‌های تصویری و PDF، متن با پردازش نوری (OCR) استخراج و همراه سند نمایه می‌شود.',
+        en: 'Each document is categorized and tagged on upload. For image files and PDFs, the text is pulled out with OCR and indexed alongside the document.',
+        de: 'Jedes Dokument wird beim Hochladen kategorisiert und verschlagwortet. Bei Bilddateien und PDFs wird der Text per OCR extrahiert und mit dem Dokument indexiert.',
+      },
+      {
+        fa: 'جست‌وجو روی عنوان، برچسب و متن استخراج‌شده کار می‌کند و دسترسی به هر دسته بر اساس نقش کاربر کنترل می‌شود.',
+        en: 'Search works over the title, tags, and extracted text, and access to each category is controlled by user role.',
+        de: 'Die Suche läuft über Titel, Schlagwörter und extrahierten Text, und der Zugriff auf jede Kategorie wird per Rolle gesteuert.',
+      },
+    ],
+    features: [
+      { fa: 'بایگانی دسته‌بندی‌شده و برچسب‌گذاری', en: 'Categorized archiving and tagging', de: 'Kategorisierte Archivierung und Verschlagwortung' },
+      { fa: 'استخراج متن از تصویر و PDF (OCR)', en: 'Text extraction from images and PDFs (OCR)', de: 'Textextraktion aus Bildern und PDFs (OCR)' },
+      { fa: 'جست‌وجوی محتوایی روی متن اسناد', en: 'Full-text search over document content', de: 'Volltextsuche über Dokumentinhalte' },
+      { fa: 'کنترل دسترسی بر اساس نقش', en: 'Role-based access control', de: 'Rollenbasierte Zugriffskontrolle' },
+    ],
+    result: {
+      fa: 'اسناد در یک بایگانی واحد و قابل جست‌وجو قرار گرفتند و پیدا کردن یک سند دیگر به حافظه‌ی افراد وابسته نیست.',
+      en: 'Documents moved into one searchable archive, and finding one no longer depends on anyone’s memory.',
+      de: 'Dokumente kamen in ein durchsuchbares Archiv, und ein Dokument zu finden hängt nicht mehr vom Gedächtnis ab.',
+    },
+    role: {
+      fa: 'طراحی و پیاده‌سازی بک‌اند، خط پردازش OCR و جست‌وجو.',
+      en: 'Backend design and implementation, the OCR pipeline, and search.',
+      de: 'Backend-Design und -Umsetzung, die OCR-Pipeline und Suche.',
+    },
+    stack: ['Django', 'PostgreSQL', 'OCR', 'Full-text search', 'React'],
     links: {},
   },
   {

@@ -8,6 +8,7 @@ const links = [
   { key: 'about', to: 'about' },
   { key: 'projects', to: 'projects' },
   { key: 'skills', to: 'skills' },
+  { key: 'resume', to: 'resume' },
   { key: 'contact', to: 'contact' },
 ]
 

@@ -42,6 +42,9 @@ export default function Home() {
                   {t('hero.cta2')}
                 </Link>
               </Magnetic>
+              <Link className="btn btn-ghost btn-sm hero-cta3" to={`/${lang}/resume`}>
+                {t('hero.cta3')}
+              </Link>
             </div>
             <p className="hero-meta" dir="ltr">
               <span>Tehran · UTC+3:30</span>
