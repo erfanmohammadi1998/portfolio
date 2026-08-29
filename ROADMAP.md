@@ -12,6 +12,17 @@ like a JSON endpoint. Deployed to GitHub Pages at https://erfanmohammadi.ir
 via `.github/workflows/deploy.yml` on push to `main`. Languages: fa (default) /
 en / de, RTL-aware.
 
+## Done (2026-08, pass 3)
+
+- All GitHub repos surfaced as projects — 5 public + 2 private
+  (`language-school-platform`, `enterprise-asset-valuation`), 7 total. Private
+  ones carry `private: true`, no code link, an "on request" note.
+- Every project writeup rewritten against the actual repo (models, settings,
+  package.json) — not guesses.
+- New "What I do" services section (`src/data/services.js`) + `GET /services`
+  console endpoint.
+- No fabricated projects — everything maps to a real repo.
+
 ## Done (2026-08)
 
 - Renamed-repo remote fixed; auto-deploy verified live.
