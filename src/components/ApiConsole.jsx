@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { projects } from '../data/projects'
 import { skills } from '../data/skills'
+import { services } from '../data/services'
 import { profile } from '../data/profile'
 
 const ConsoleContext = createContext(null)
@@ -197,6 +198,14 @@ export default function ApiConsole() {
             links: p.links,
           },
           to: 'projects',
+        })
+        return
+      }
+      // /services
+      if (path === 'services') {
+        push({
+          type: 'json',
+          data: services.map((s) => tx(s.title)),
         })
         return
       }
