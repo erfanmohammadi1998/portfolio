@@ -34,15 +34,6 @@ en / de, RTL-aware.
 - [ ] **Project screenshots.** Cards have no imagery yet. When images arrive:
       drop them in `public/`, add a `cover` field per project in
       `src/data/projects.js`, and render it on the project cards.
-- [ ] **GitHub repo metadata** — set description + topics on the `portfolio`
-      repo; point the "About" website field at erfanmohammadi.ir. Needs the
-      `gh` CLI (not installed) or an API token. Suggested values:
-      - description: *Interactive developer portfolio — an architecture map you
-        navigate and an API console you can query. React + Vite, trilingual
-        (fa/en/de), RTL-aware.*
-      - homepage: `https://erfanmohammadi.ir`
-      - topics: `portfolio` `personal-website` `react` `vite` `react-router`
-        `i18n` `rtl` `single-page-app` `github-pages` `svg-animation`
 - [ ] Optional: native German copy review.
 
 ## Decided / closed
@@ -52,3 +43,5 @@ en / de, RTL-aware.
 - `cv-management-system` README written and pushed to that repo.
 - CV project entry in `src/data/projects.js` corrected to the real stack
   (full-stack Django + DRF + React, SQLite — not a SQL Server service).
+- `portfolio` repo description, homepage, and 10 topics set (done manually
+  via the GitHub web UI).
