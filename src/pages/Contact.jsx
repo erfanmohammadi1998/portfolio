@@ -14,6 +14,7 @@ export default function Contact() {
     { key: 'github', label: L.github, value: 'github.com/erfanmohammadi1998', href: profile.links.github, mono: true },
     { key: 'linkedin', label: L.linkedin, value: 'linkedin.com/in/erfan-mohammadi77', href: profile.links.linkedin, mono: true },
     { key: 'website', label: L.website, value: 'erfanmohammadi.ir', href: profile.links.website, mono: true },
+    { key: 'company', label: L.company, value: 'houshiva.ir', href: profile.links.houshiva, mono: true },
   ]
 
   async function copy(key, text) {
