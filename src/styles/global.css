@@ -436,6 +436,30 @@ button:focus-visible {
   transform: translateY(0);
 }
 
+/* Below ~680px the wide diagram stops paying off — it just becomes a
+   horizontal-scroll strip. Switch to a plain vertical stack of the same
+   nodes instead of shrinking the SVG illegibly small. */
+@media (max-width: 680px) {
+  .sysmap-scroll { overflow: visible; }
+  .sysmap-stage {
+    min-width: 0;
+    width: 100%;
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+  }
+  .sysmap-svg { display: none; }
+  .sysmap-node {
+    position: static;
+    transform: none;
+    width: 100%;
+    min-width: 0;
+  }
+  .sysmap-node-endpoint { display: none; }
+}
+
 .map-console-btn { margin-block-start: 16px; }
 
 /* ============ Hero code panel ============ */
@@ -546,7 +570,7 @@ button:focus-visible {
 .marquee-dot { color: var(--accent); }
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-25%); }
 }
 [dir='rtl'] .marquee-track { animation-direction: reverse; }
 
@@ -1356,7 +1380,7 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 14px;
 }
-.footer-brand { color: var(--text); font-weight: 600; }
+.footer-copy { color: var(--text-muted); font-size: 0.84rem; }
 .footer-links { display: flex; gap: 18px; font-family: var(--font-mono); font-size: 0.8rem; }
 [dir='rtl'] .footer-links { font-family: var(--font-body); }
 .footer-links a:hover { color: var(--accent); }

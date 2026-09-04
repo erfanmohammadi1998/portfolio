@@ -215,6 +215,8 @@ export const translations = {
       hoursLabel: 'ساعت',
     },
 
+    footer: { rights: 'تمام حقوق محفوظ است.' },
+
     notFound: {
       code: '404',
       title: 'این مسیر تعریف نشده است',
@@ -439,6 +441,8 @@ export const translations = {
       hoursLabel: 'h',
     },
 
+    footer: { rights: 'All rights reserved.' },
+
     notFound: {
       code: '404',
       title: 'This route is not defined',
@@ -662,6 +666,8 @@ export const translations = {
       },
       hoursLabel: 'Std.',
     },
+
+    footer: { rights: 'Alle Rechte vorbehalten.' },
 
     notFound: {
       code: '404',
