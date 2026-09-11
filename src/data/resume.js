@@ -33,11 +33,6 @@ export const resume = {
 
   education: [
     {
-      degree: { fa: 'کارشناسی مهندسی کامپیوتر — نرم‌افزار', en: 'B.Sc. Computer / Software Engineering' },
-      school: { fa: 'دانشگاه علمی کاربردی، واحد ۳۳', en: 'University of Applied Science, Unit 33' },
-      period: { fa: '۱۴۰۴ — ۱۴۰۵', en: '2025 — 2026' },
-    },
-    {
       degree: { fa: 'کاردانی نرم‌افزار کامپیوتر', en: 'Associate Degree, Computer Software' },
       school: { fa: 'آموزشکده فنی امام صادق (ع)', en: 'Imam Sadegh Technical College' },
       period: { fa: '۱۳۹۴ — ۱۳۹۶', en: '2015 — 2017' },
