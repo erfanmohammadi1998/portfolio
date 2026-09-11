@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import Reveal from '../components/Reveal'
 import EmptyState from '../components/EmptyState'
-import ProjectCover, { LockGlyph } from '../components/ProjectCover'
+import { LockGlyph } from '../components/ProjectCover'
+import ProjectMedia from '../components/ProjectMedia'
 import { projects } from '../data/projects'
 
 export default function Projects() {
@@ -24,7 +25,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <Reveal as="div" key={p.slug} delay={(i % 3) * 70}>
               <Link className="proj-card" to={`/${lang}/projects/${p.slug}`}>
-                <ProjectCover arch={p.arch} seed={p.slug} />
+                <ProjectMedia project={p} />
                 <div className="proj-card-body">
                   <div className="proj-card-head">
                     <h3 dir="auto">{tx(p.title)}</h3>
