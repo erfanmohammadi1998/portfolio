@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
-import ProjectCover, { LockGlyph } from '../components/ProjectCover'
+import { LockGlyph } from '../components/ProjectCover'
+import ProjectMedia from '../components/ProjectMedia'
 import { getProject } from '../data/projects'
 
 export default function ProjectDetail() {
@@ -33,8 +35,10 @@ export default function ProjectDetail() {
       </header>
 
       <div className="pd-cover">
-        <ProjectCover arch={p.arch} seed={p.slug} />
+        <ProjectMedia project={p} />
       </div>
+
+      {Array.isArray(p.gallery) && p.gallery.length > 0 && <Gallery images={p.gallery} />}
 
       <div className="pd-grid">
         <div className="pd-main">
@@ -99,5 +103,42 @@ export default function ProjectDetail() {
         </aside>
       </div>
     </article>
+  )
+}
+
+function Gallery({ images }) {
+  const [open, setOpen] = useState(null)
+  return (
+    <div className="pd-gallery">
+      {images.map((src, i) => (
+        <button type="button" className="pd-gallery-item" key={src} onClick={() => setOpen(i)}>
+          <img src={src} alt="" loading="lazy" />
+        </button>
+      ))}
+      {open !== null && (
+        <div className="pd-lightbox" onClick={() => setOpen(null)}>
+          <img src={images[open]} alt="" />
+          <button type="button" className="pd-lightbox-close" onClick={() => setOpen(null)}>✕</button>
+          {open > 0 && (
+            <button
+              type="button"
+              className="pd-lightbox-nav prev"
+              onClick={(e) => { e.stopPropagation(); setOpen(open - 1) }}
+            >
+              ‹
+            </button>
+          )}
+          {open < images.length - 1 && (
+            <button
+              type="button"
+              className="pd-lightbox-nav next"
+              onClick={(e) => { e.stopPropagation(); setOpen(open + 1) }}
+            >
+              ›
+            </button>
+          )}
+        </div>
+      )}
+    </div>
   )
 }

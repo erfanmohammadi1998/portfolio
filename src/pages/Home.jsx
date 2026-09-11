@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useConsole } from '../components/ApiConsole'
 import SystemMap from '../components/SystemMap'
-import ProjectCover, { LockGlyph } from '../components/ProjectCover'
+import { LockGlyph } from '../components/ProjectCover'
+import ProjectMedia from '../components/ProjectMedia'
 import CodePanel from '../components/CodePanel'
 import Marquee from '../components/Marquee'
 import Reveal from '../components/Reveal'
@@ -126,7 +127,7 @@ export default function Home() {
         <div className="feat-grid">
           {featured.map((p) => (
             <Link className="feat-card" key={p.slug} to={`/${lang}/projects/${p.slug}`}>
-              <ProjectCover arch={p.arch} seed={p.slug} />
+              <ProjectMedia project={p} />
               <div className="feat-card-body">
                 <h3 dir="auto">
                   {tx(p.title)}
