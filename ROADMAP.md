@@ -5,12 +5,54 @@ go in.
 
 ## Goal
 
-A professional, distinctive portfolio that doubles as a work sample. Core
-concept: **read the site like a system** — an interactive architecture map on
-the home page, and an **API console** (`Ctrl/⌘ + K`) that returns each section
-like a JSON endpoint. Deployed to GitHub Pages at https://erfanmohammadi.ir
-via `.github/workflows/deploy.yml` on push to `main`. Languages: fa (default) /
+A distinctive personal portfolio that also works as a work sample: monochrome
+editorial base, one lime accent, lots of considered motion, equally good on
+desktop and phone. Deployed to GitHub Pages at https://erfanmohammadi.ir via
+`.github/workflows/deploy.yml` on push to `main`. Languages: fa (default) /
 en / de, RTL-aware.
+
+## Done (2026-10, pass 8: SEO)
+
+- Build-time prerendering (`src/entry-server.jsx` + `scripts/prerender.mjs`): every route is a
+  real HTML file, so GitHub Pages answers with 200 and crawlers / link previews see content.
+- Per-page, per-language titles and descriptions (`src/seo.js`), canonical with trailing slash,
+  hreflang (fa / en / de / x-default), Open Graph + Twitter cards, JSON-LD graph (Person,
+  WebSite, ProfilePage, CollectionPage, CreativeWork, ContactPage, BreadcrumbList).
+- Name variants for search (عرفان محمدی, Erfan Mohammadi, «… برنامه‌نویس», «… ششکل») in
+  JSON-LD `alternateName` and keywords; portrait renamed to `erfan-mohammadi.jpg`.
+- 1200×630 preview images per language and per project, manifest + PNG icons, generated
+  sitemap with image entries, real `404.html` with noindex.
+- Portfolio trimmed to 12 projects; experience now 5+ years; employer named only in the
+  experience entries.
+
+## Done (2026-10, pass 7: redesign)
+
+- The "read the site like an API" concept is gone: API console, system map,
+  code panel, terminal boot screen and their data files removed.
+- New visual system: dark + light themes (circular view-transition toggle),
+  self-hosted fonts (Google Fonts is unreachable from Iran), Lenis smooth
+  scroll, preloader that says hello in several languages, page curtain,
+  new cursor (dot + trailing ring with labels; touch devices never see it).
+- Home: kinetic hero with portrait, rotating roles, orbiting ring and
+  floating chips; count-up stats; crossing marquee bands; scroll-lit
+  statement; bento services with pointer spotlight; pinned horizontal
+  "selected work" (swipe row on phones); process;
+  current jobs; big CTA.
+- Portfolio mirrors houshiva.ir/portfolio (12 projects; café, digital menu,
+  clothing store, barber landing page, label printing and modem tools left out): same images,
+  order, categories and filter, and the same detail-page sections
+  (overview, problem / solution, how it was built, features, result, tags,
+  gallery with lightbox, related work). Persian copy is verbatim; English
+  and German are translations (`src/data/projects.{fa,en,de}.js`).
+- Copy rewritten in a plain, first-person voice; everything re-synced with
+  the final CV (Oct 2026): experience incl. training years and service,
+  education, 420 h of training, skill levels, languages.
+- Skills page shows CV levels plus a tech-usage chart counted from projects.
+- Résumé page: web CV that prints to A4, with EN / DE PDF downloads.
+- Contact: mailto composer (pre-filled from "request a similar project").
+- The employer is named only in the experience entries (home "where I
+  work", About timeline, Résumé), nowhere else.
+- Sitemap covers all pages and project pages in all three languages.
 
 ## Done (2026-08, pass 6)
 
@@ -84,10 +126,14 @@ bragging, no self-congratulation.
 
 ## Next
 
-- [ ] **Project screenshots.** Cards have no imagery yet. When images arrive:
-      drop them in `public/`, add a `cover` field per project in
-      `src/data/projects.js`, and render it on the project cards.
+- [ ] Verify the domain in Google Search Console and Bing Webmaster Tools, submit
+      `https://erfanmohammadi.ir/sitemap.xml`.
+- [ ] Link to erfanmohammadi.ir from GitHub, LinkedIn, houshiva.ir and other profiles.
+
+- [ ] Add the AI assistant and the price inquiry & asset valuation system
+      (both in the CV) once there are screenshots to show.
 - [ ] Optional: native German copy review.
+- [ ] Optional: per-page Open Graph images.
 
 ## Decided / closed
 

@@ -1,43 +1,43 @@
 import { useEffect, useRef, useState } from 'react'
 
-export default function Reveal({ children, className = '', delay = 0, as: Tag = 'div' }) {
+// Fades / slides children in the first time they scroll into view.
+// variant: 'up' (default) | 'fade' | 'scale' | 'clip'
+export function useInView(options = {}) {
   const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
+  const [inView, setInView] = useState(false)
+  const { threshold = 0.15, rootMargin = '0px 0px -8% 0px' } = options
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-
     if (typeof IntersectionObserver === 'undefined') {
-      setVisible(true)
+      setInView(true)
       return
     }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true)
-          observer.unobserve(el)
+          setInView(true)
+          observer.disconnect()
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+      { threshold, rootMargin },
     )
     observer.observe(el)
+    return () => observer.disconnect()
+  }, [threshold, rootMargin])
 
-    // Safety net: never leave content hidden if the observer never fires.
-    const fallback = setTimeout(() => setVisible(true), 1600)
+  return [ref, inView]
+}
 
-    return () => {
-      observer.disconnect()
-      clearTimeout(fallback)
-    }
-  }, [])
-
+export default function Reveal({ children, className = '', delay = 0, variant = 'up', as: Tag = 'div', style, ...rest }) {
+  const [ref, inView] = useInView()
   return (
     <Tag
       ref={ref}
-      className={`reveal${visible ? ' reveal-visible' : ''} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      className={`reveal reveal-${variant}${inView ? ' is-in' : ''} ${className}`}
+      style={{ '--delay': `${delay}ms`, ...style }}
+      {...rest}
     >
       {children}
     </Tag>

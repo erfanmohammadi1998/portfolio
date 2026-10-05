@@ -1,132 +1,144 @@
-import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
-import Reveal from '../components/Reveal'
 import { profile } from '../data/profile'
-import { resume } from '../data/resume'
+import { experience, education, training, languages } from '../data/resume'
+import PageHeader from '../components/PageHeader'
+import Reveal from '../components/Reveal'
+import SplitWords from '../components/SplitWords'
+import CtaBlock from '../components/CtaBlock'
+import Icon from '../components/Icon'
 
 export default function About() {
-  const { lang, t, tx } = useLanguage()
-  const paragraphs = t('about.intro').split('\n\n')
-  const timeline = t('about.timeline')
-  const L = t('about.labels')
-  const rl = lang === 'de' ? 'en' : lang
+  const { lang, t, tx, num } = useLanguage()
+  const story = t('about.story')
+  const F = t('about.facts')
+  const totalHours = training.reduce((s, c) => s + c.hours, 0)
 
-  const details = [
-    { k: L.name, v: tx(profile.name) },
-    { k: L.role, v: tx(profile.role) },
-    { k: L.location, v: tx(profile.location) },
-    { k: L.email, v: profile.email, href: `mailto:${profile.email}`, ltr: true },
-    { k: L.phone, v: profile.phoneDisplay, href: `tel:${profile.phone}`, ltr: true },
-    { k: L.availability, v: tx(profile.availability) },
+  const facts = [
+    { k: F.based, v: tx(profile.location) },
+    { k: F.focus, v: F.focusValue },
+    { k: F.now, v: F.nowValue },
+    { k: F.languages, v: F.languagesValue },
   ]
 
   return (
-    <section className="container section about">
-      <div className="section-head">
-        <span className="section-tag">// {t('about.title')}</span>
-        <h2 dir="auto">{t('about.title')}</h2>
-        <p dir="auto">{t('about.subtitle')}</p>
-      </div>
+    <>
+      <PageHeader eyebrow={t('about.eyebrow')} title={t('about.lead')} />
 
-      <div className="about-grid">
-        <div className="about-main">
-          <figure className="about-photo">
-            <img src={profile.photo} alt={tx(profile.name)} loading="lazy" />
-          </figure>
-          <div className="about-body">
-            {paragraphs.map((p, i) => (
-              <p key={i} dir="auto">{p}</p>
-            ))}
-            <p className="about-now" dir="auto">
-              <span className="about-now-tag">{t('about.nowTag')}</span>
-              {t('about.now')}
-            </p>
-          </div>
-        </div>
+      <section className="container about-intro">
+        <Reveal className="about-photo" variant="clip">
+          <img src={profile.photo} alt={t('about.photoAlt')} />
+          <span className="about-photo-tag">
+            <Icon name="pin" size={14} /> {tx(profile.location)}
+          </span>
+        </Reveal>
 
-        <aside className="about-side">
-          <span className="section-tag">// {t('about.detailsTag')}</span>
-          <dl className="detail-list">
-            {details.map((d) => (
-              <div key={d.k}>
-                <dt dir="auto">{d.k}</dt>
-                <dd dir={d.ltr ? 'ltr' : 'auto'}>
-                  {d.href ? <a href={d.href}>{d.v}</a> : d.v}
-                </dd>
-              </div>
+        <div className="about-story">
+          {story.map((p, i) => (
+            <Reveal as="p" key={i} delay={i * 100}>
+              {p}
+            </Reveal>
+          ))}
+          <dl className="about-facts">
+            {facts.map((f, i) => (
+              <Reveal key={f.k} delay={200 + i * 70}>
+                <dt>{f.k}</dt>
+                <dd>{f.v}</dd>
+              </Reveal>
             ))}
           </dl>
-          <div className="about-side-links">
-            <a href={profile.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
-            <Link to={`/${lang}/resume`}>{t('nav.resume')} ↗</Link>
-          </div>
-        </aside>
-      </div>
+        </div>
+      </section>
 
-      <div className="about-blocks">
-        <Reveal className="about-block">
-          <span className="section-tag">// {t('about.experienceTag')}</span>
-          <div className="ab-list">
-            {resume.experience.map((e, i) => (
-              <div className="ab-item" key={i}>
-                <div className="ab-item-head">
-                  <h3 dir="auto">{e.role[rl]}</h3>
-                  <span className="ab-period" dir="auto">{e.period[rl]}</span>
-                </div>
-                <span className="ab-org" dir="auto">{e.company[rl]}</span>
+      <section className="container section">
+        <SplitWords as="h2" className="section-title" text={t('about.experience')} />
+        <ol className="timeline">
+          {experience.map((job, i) => (
+            <Reveal as="li" key={job.key} className="timeline-item" delay={i * 60}>
+              <span className="timeline-dot" aria-hidden="true" />
+              <div className="timeline-when">
+                <span>{tx(job.period)}</span>
+                {job.current && (
+                  <span className="job-badge">
+                    <span className="pulse-dot" /> {t('about.current')}
+                  </span>
+                )}
+              </div>
+              <div className="timeline-body" data-spot>
+                <h3>{tx(job.role)}</h3>
+                <p className="timeline-org">
+                  {job.link ? (
+                    <a href={job.link} target="_blank" rel="noreferrer" className="link-underline">{tx(job.org)}</a>
+                  ) : (
+                    tx(job.org)
+                  )}
+                  {job.note && <span> · {tx(job.note)}</span>}
+                </p>
                 <ul>
-                  {e.bullets.map((b, j) => (
-                    <li key={j} dir="auto">{b[rl]}</li>
+                  {job.bullets[lang].map((b, j) => (
+                    <li key={j}>{b}</li>
                   ))}
                 </ul>
+                {job.tech && (
+                  <div className="chips" dir="ltr">
+                    {job.tech.map((x) => (
+                      <span className="chip" key={x}>{x}</span>
+                    ))}
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal className="about-block">
-          <span className="section-tag">// {t('about.educationTag')}</span>
-          <div className="ab-list">
-            {resume.education.map((e, i) => (
-              <div className="ab-item" key={i}>
-                <div className="ab-item-head">
-                  <h3 dir="auto">{e.degree[rl]}</h3>
-                  <span className="ab-period" dir="auto">{e.period[rl]}</span>
-                </div>
-                <span className="ab-org" dir="auto">{e.school[rl]}</span>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal className="about-block">
-          <span className="section-tag">// {t('about.coursesTag')}</span>
-          <ul className="ab-courses">
-            {resume.courses.map((c, i) => (
-              <li key={i}>
-                <span>{c.title}</span>
-                <span className="ab-course-meta" dir="ltr">
-                  {c.provider} · {c.hours}h · {c.year}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </div>
-
-      <div className="timeline">
-        <span className="section-tag">// {t('about.timelineTag')}</span>
-        <ol>
-          {timeline.map((item, i) => (
-            <Reveal as="li" key={i} delay={i * 90} className="timeline-item">
-              <span className="timeline-time">{item.time}</span>
-              <h3 dir="auto">{item.title}</h3>
-              <p dir="auto">{item.body}</p>
             </Reveal>
           ))}
         </ol>
-      </div>
-    </section>
+      </section>
+
+      <section className="container section about-cols">
+        <div>
+          <SplitWords as="h2" className="section-title is-sm" text={t('about.education')} />
+          <ul className="edu">
+            {education.map((e, i) => (
+              <Reveal as="li" key={i} delay={i * 90} data-spot>
+                <span className="edu-period">{tx(e.period)}</span>
+                <h3>{tx(e.degree)}</h3>
+                <p>{tx(e.school)}</p>
+                {e.note && <p className="edu-note">{tx(e.note)}</p>}
+              </Reveal>
+            ))}
+          </ul>
+
+          <SplitWords as="h2" className="section-title is-sm about-lang-title" text={t('about.languages')} />
+          <ul className="langs">
+            {languages.map((l, i) => (
+              <Reveal as="li" key={i} delay={i * 90}>
+                <div className="langs-row">
+                  <strong>{tx(l.name)}</strong>
+                  <span>{tx(l.level)}</span>
+                </div>
+                <span className="meter"><span style={{ '--v': `${l.value}%` }} /></span>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <SplitWords as="h2" className="section-title is-sm" text={t('about.training')} />
+          <ul className="courses">
+            {training.map((c, i) => (
+              <Reveal as="li" key={i} delay={i * 50} variant="fade">
+                <span className="courses-year">{tx(c.year)}</span>
+                <span className="courses-title" dir="ltr">{c.title}</span>
+                <span className="courses-meta">
+                  {tx(c.provider)} · {num(c.hours)} {t('resume.hours')}
+                </span>
+              </Reveal>
+            ))}
+          </ul>
+          <p className="courses-total">
+            <strong>{num(totalHours)}</strong> {t('about.trainingTotal')}
+          </p>
+        </div>
+      </section>
+
+      <CtaBlock />
+    </>
   )
 }

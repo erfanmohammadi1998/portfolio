@@ -1,51 +1,75 @@
-import { Link } from 'react-router-dom'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
-import Reveal from '../components/Reveal'
-import EmptyState from '../components/EmptyState'
-import { LockGlyph } from '../components/ProjectCover'
-import ProjectMedia from '../components/ProjectMedia'
-import { projects } from '../data/projects'
+import { projects, categories } from '../data/projects'
+import PageHeader from '../components/PageHeader'
+import ProjectCard from '../components/ProjectCard'
+import CtaBlock from '../components/CtaBlock'
+
+// useLayoutEffect only in the browser (it warns during prerendering).
+const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect
 
 export default function Projects() {
-  const { lang, t, tx } = useLanguage()
-  const L = t('projects.labels')
+  const { t, num } = useLanguage()
+  const [params, setParams] = useSearchParams()
+  const active = categories.includes(params.get('type')) ? params.get('type') : 'all'
+  const shown = active === 'all' ? projects : projects.filter((p) => p.category === active)
+
+  const tabsRef = useRef(null)
+  const [pill, setPill] = useState(null)
+
+  // Slide the highlight under the active tab.
+  useIsoLayoutEffect(() => {
+    function place() {
+      const btn = tabsRef.current?.querySelector('.is-active')
+      if (!btn) return
+      setPill({ left: btn.offsetLeft, width: btn.offsetWidth, top: btn.offsetTop, height: btn.offsetHeight })
+    }
+    place()
+    window.addEventListener('resize', place)
+    document.fonts?.ready.then(place)
+    return () => window.removeEventListener('resize', place)
+  }, [active, t])
+
+  function select(key) {
+    const next = new URLSearchParams(params)
+    if (key === 'all') next.delete('type')
+    else next.set('type', key)
+    setParams(next, { replace: true, preventScrollReset: true })
+  }
+
+  const count = (key) => (key === 'all' ? projects.length : projects.filter((p) => p.category === key).length)
 
   return (
-    <section className="container section">
-      <div className="section-head">
-        <span className="section-tag">// {t('projects.title')}</span>
-        <h2 dir="auto">{t('projects.title')}</h2>
-        <p dir="auto">{t('projects.subtitle')}</p>
-      </div>
+    <>
+      <PageHeader eyebrow={t('projects.eyebrow')} title={t('projects.title')} lead={t('projects.subtitle')} />
 
-      {projects.length === 0 ? (
-        <EmptyState title={t('projects.emptyTitle')} body={t('projects.emptyBody')} />
-      ) : (
-        <div className="proj-grid">
-          {projects.map((p, i) => (
-            <Reveal as="div" key={p.slug} delay={(i % 3) * 70}>
-              <Link className="proj-card" to={`/${lang}/projects/${p.slug}`}>
-                <ProjectMedia project={p} />
-                <div className="proj-card-body">
-                  <div className="proj-card-head">
-                    <h3 dir="auto">{tx(p.title)}</h3>
-                    {p.private && (
-                      <span className="proj-private"><LockGlyph /> {L.private}</span>
-                    )}
-                  </div>
-                  <p className="proj-card-tagline" dir="auto">{tx(p.tagline)}</p>
-                  <div className="stack-list proj-card-stack">
-                    {p.stack.slice(0, 5).map((s) => (
-                      <span className="stack-chip sm" key={s}>{s}</span>
-                    ))}
-                  </div>
-                  <span className="proj-card-cta">{L.view} →</span>
-                </div>
-              </Link>
-            </Reveal>
+      <section className="container works">
+        <div className="filters fade-in" style={{ animationDelay: '450ms' }} role="tablist" ref={tabsRef}>
+          {pill && <span className="filters-pill" style={{ left: pill.left, width: pill.width, top: pill.top, height: pill.height }} aria-hidden="true" />}
+          {categories.map((key) => (
+            <button
+              key={key}
+              type="button"
+              role="tab"
+              aria-selected={active === key}
+              className={active === key ? 'is-active' : ''}
+              onClick={() => select(key)}
+            >
+              {t(`projects.categories.${key}`)}
+              <sup>{num(count(key))}</sup>
+            </button>
           ))}
         </div>
-      )}
-    </section>
+
+        <div className="pgrid" key={active}>
+          {shown.map((p, i) => (
+            <ProjectCard key={p.slug} project={p} index={i} />
+          ))}
+        </div>
+      </section>
+
+      <CtaBlock />
+    </>
   )
 }
