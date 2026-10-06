@@ -127,7 +127,7 @@ export default {
   },
 
   'houshiva-asset': {
-    title: 'Houshiva Asset: Anlagen- und Inventarverwaltung',
+    title: 'Houshiva Track: QR-basierte Nachverfolgung von Betriebsmitteln mit mobiler Inventur',
     lead: 'Ein System zur physischen Verwaltung und Inventur des Anlagevermögens: QR-Code an jedem Gegenstand, Inventur mit der Handykamera, automatische Abweichungsberichte, und alles ohne Programmierung konfigurierbar.',
     overview: 'Ein eigenständiges, vollständig persischsprachiges Produkt für die physische und administrative Kontrolle von Anlagen in Behörden, Unternehmen, Fabriken und Geschäften. Jedes Anlagegut hat einen „aktuellen Zustand“ und daneben ein unveränderliches Ereignisprotokoll aller Umzüge, Verantwortlichenwechsel, Standortänderungen, Reparaturen und Aussonderungen. So sieht man jederzeit den gesamten Weg eines Gegenstands seit dem ersten Tag.',
     problem: 'In vielen Organisationen werden Anlagedaten gar nicht erfasst oder nur in verstreuten Excel-Dateien geführt. Niemand weiß, wer einen Gegenstand gerade hat, wo er steht und welche Geschichte er hat. Die jährliche Inventur ist komplett manuell und zeitraubend, und Abweichungen fallen meist viel zu spät auf.',
@@ -184,27 +184,6 @@ export default {
       'Aufgaben und Erinnerungen zur Nachverfolgung jedes Kandidaten',
     ],
     result: 'Das Recruiting ist von verstreuten E-Mails in ein einheitliches, nachvollziehbares System umgezogen. Das Team weiß jederzeit, wo jeder Kandidat steht, und die Analysen zeigen, welche Quelle wirklich Ergebnisse bringt.',
-  },
-
-  'nikiteb-website': {
-    title: 'Relaunch der Unternehmenswebsite Nikiteb',
-    lead: 'Vollständiger Neubau einer WordPress-Firmenwebsite mit React und Django, für bessere Performance und Skalierbarkeit.',
-    overview: 'Niki Pajouh Teb va Salamat, ein Hersteller von Medizintechnik, brauchte eine Firmenwebsite für Produkte und Leistungen, die technisch sauber gebaut ist und mit dem Unternehmen wachsen kann.',
-    problem: 'Die alte Website basierte auf WordPress und war an die Grenzen ihres Themes gestoßen. Jeder neue Bereich (Produktkatalog, Kategorieseiten, Blog) war ein Kampf mit dem Theme, und die Abhängigkeit von Drittanbieter-Plug-ins erhöhte das Wartungsrisiko.',
-    solution: 'Die gesamte Website wurde mit React-Frontend und Django-Backend neu geschrieben. Die vollständige Trennung von Frontend und Backend über eine API gab volle Gestaltungsfreiheit und eine Basis, auf der neue Funktionen einfach hinzukommen.',
-    build: [
-      'Das React-Frontend ist komplett vom Backend getrennt und spricht nur über eine REST-API mit Django. Kein WordPress-Theme und kein Plug-in schränkt das Design ein.',
-      'Inhalte (Produkte, Kategorien, Seiten) werden im Django-Admin gepflegt. Das Team kann die Website ohne technisches Wissen aktualisieren.',
-      'Die SEO-Struktur (Titel, Meta-Beschreibungen, sprechende URLs) war von Anfang an eingeplant und nicht nachträglich per Plug-in ergänzt.',
-    ],
-    features: [
-      'Produktkatalog mit Kategorien',
-      'Seiten zu Unternehmen und Leistungen',
-      'Content-Verwaltung unabhängig vom Frontend',
-      'SEO-freundliche Struktur',
-      'Vollständig responsive auf Handy und Desktop',
-    ],
-    result: 'Eine Website, die deutlich schneller lädt als die WordPress-Version und deren Inhalte das Team ohne Entwickler pflegt.',
   },
 
   'ticket-management-system': {

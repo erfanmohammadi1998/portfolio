@@ -575,9 +575,9 @@ html[lang='fa'] .hero-name .split-mask:last-child .split-word {
 .statement { display: grid; gap: 36px; justify-items: start; }
 .word-reveal {
   font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em;
-  font-size: clamp(1.45rem, 3.3vw, 2.75rem); line-height: 1.28; max-width: 1150px;
+  font-size: clamp(1.2rem, 2.3vw, 1.95rem); line-height: 1.35; max-width: 1150px;
 }
-html[lang='fa'] .word-reveal { letter-spacing: 0; line-height: 1.75; font-weight: 700; font-size: clamp(1.3rem, 2.8vw, 2.35rem); }
+html[lang='fa'] .word-reveal { letter-spacing: 0; line-height: 1.85; font-weight: 600; font-size: clamp(1.05rem, 1.9vw, 1.6rem); }
 .wr-word { opacity: 0.14; transition: opacity 0.4s, color 0.4s; }
 .wr-word.is-lit { opacity: 1; }
 

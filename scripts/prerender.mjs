@@ -58,6 +58,7 @@ write(
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>عرفان محمدی | Erfan Mohammadi</title>
     <meta name="description" content="Erfan Mohammadi, Python / Django backend developer and SQL Server specialist." />
+    <meta name="google-site-verification" content="tIw7dngvI5cilcEk74O3UoJ1YOu3Tw60KmYN6pUpV2k" />
     <link rel="canonical" href="${urlFor('fa')}" />
     ${alternates}
     <link rel="alternate" hreflang="x-default" href="${urlFor('fa')}" />

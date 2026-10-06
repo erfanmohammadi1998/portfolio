@@ -55,7 +55,7 @@ export const projects = [
   {
     slug: 'houshiva-asset',
     category: 'management-system',
-    name: 'Houshiva Asset',
+    name: 'Houshiva Track',
     featured: true,
     cover: img('houshiva-asset-1'),
     gallery: ['houshiva-asset-2', 'houshiva-asset-3', 'houshiva-asset-4', 'houshiva-asset-5', 'houshiva-asset-6'].map(img),
@@ -69,15 +69,6 @@ export const projects = [
     cover: img('rezumeban-1'),
     gallery: ['rezumeban-2', 'rezumeban-3', 'rezumeban-4', 'rezumeban-5', 'rezumeban-6'].map(img),
     tech: ['Django', 'DRF', 'JWT', 'React', 'Vite', 'Tailwind CSS'],
-  },
-  {
-    slug: 'nikiteb-website',
-    category: 'website',
-    name: 'Nikiteb',
-    cover: img('nikiteb'),
-    gallery: [img('nikiteb-2')],
-    live: 'https://nikiteb.com',
-    tech: ['React', 'Django', 'REST API'],
   },
   {
     slug: 'ticket-management-system',

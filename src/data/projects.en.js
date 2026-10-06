@@ -127,7 +127,7 @@ export default {
   },
 
   'houshiva-asset': {
-    title: 'Houshiva Asset: fixed asset management and inventory',
+    title: 'Houshiva Track: QR-based asset tracking with mobile stock-taking',
     lead: 'A system for tracking an organisation’s physical assets: a QR code on every item, stock-taking with a phone camera, automatic discrepancy reports, and everything configurable without code.',
     overview: 'A standalone, fully Persian product for the physical and administrative control of assets in organisations, companies, factories and shops. Every asset has a “current state”, and alongside it an immutable event log of every move, change of custodian, change of location, repair and disposal. You can always see the full path an asset has taken since day one.',
     problem: 'In many organisations asset data is either not recorded at all or kept in scattered Excel files. Nobody knows who has an item right now, where it is or what its history is. The yearly stock-take is entirely manual and slow, and discrepancies are usually found far too late.',
@@ -184,27 +184,6 @@ export default {
       'Tasks and reminders to follow up on every candidate',
     ],
     result: 'Hiring moved from scattered emails to one trackable system. The recruiting team always knows where every candidate is, and the analytics show which sources actually deliver.',
-  },
-
-  'nikiteb-website': {
-    title: 'Nikiteb corporate website redesign',
-    lead: 'A full rebuild of a WordPress company website with React and Django, for better performance and room to grow.',
-    overview: 'Niki Pajouh Teb va Salamat, a medical equipment manufacturer, needed a company website to present its products and services, one that was built properly and could grow with the company.',
-    problem: 'The old site was built on WordPress and had hit the limits of its theme. Adding anything new (a product catalogue, category pages, a blog) meant fighting the theme, and relying on third-party plugins made maintenance risky.',
-    solution: 'The whole site was rewritten from scratch with a React frontend and a Django backend. Separating the two completely through an API gave full freedom in the interface design and a foundation that makes adding new features simple.',
-    build: [
-      'The React frontend is completely separate from the backend and talks to Django only through a REST API, so no WordPress theme or plugin limits the design.',
-      'Content (products, categories, pages) is managed in the Django admin panel, so the company team can update the site without technical knowledge.',
-      'SEO structure (titles, meta descriptions, meaningful URLs) was built in from the start, not bolted on as a plugin.',
-    ],
-    features: [
-      'Product catalogue with categories',
-      'Company and services pages',
-      'Content management panel independent of the frontend',
-      'SEO-friendly structure',
-      'Fully responsive on mobile and desktop',
-    ],
-    result: 'A website that loads much faster than the WordPress version, and whose content the company team manages without needing a developer.',
   },
 
   'ticket-management-system': {
