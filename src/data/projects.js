@@ -21,8 +21,8 @@ export const projects = [
     category: 'management-system',
     name: 'Avana',
     featured: true,
-    cover: img('avana-1'),
-    gallery: ['avana-2', 'avana-3', 'avana-4', 'avana-5', 'avana-6', 'avana-7'].map(img),
+    cover: img('avana-2'),
+    gallery: ['avana-1', 'avana-3', 'avana-4', 'avana-5', 'avana-6', 'avana-7'].map(img),
     tech: ['Django', 'DRF', 'JWT', 'React', 'Chart.js', 'ReportLab'],
   },
   {
