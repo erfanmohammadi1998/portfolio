@@ -1,4 +1,3 @@
-import { projects } from './projects'
 
 // CV content, kept in step with the final PDFs (EN / DE / FA, Oct 2026).
 // Used by the About, Skills and Resume pages and the home page timeline.
@@ -6,7 +5,7 @@ import { projects } from './projects'
 export const stats = [
   { value: 5, suffix: '+', label: { fa: 'سال سابقه‌ی کار حرفه‌ای', en: 'years of professional work', de: 'Jahre Berufserfahrung' } },
   { value: 15, suffix: '+', label: { fa: 'ماژول ERP طراحی و پیاده‌سازی‌شده', en: 'ERP modules delivered', de: 'umgesetzte ERP-Module' } },
-  { value: projects.length, suffix: '', label: { fa: 'پروژه‌ی تحویل‌شده', en: 'shipped projects', de: 'ausgelieferte Projekte' } },
+  { value: 70, suffix: '+', label: { fa: 'پروژه‌ی تحویل‌شده', en: 'shipped projects', de: 'ausgelieferte Projekte' } },
   { value: 420, suffix: '', label: { fa: 'ساعت دوره‌ی تخصصی', en: 'hours of training', de: 'Stunden Weiterbildung' } },
 ]
 

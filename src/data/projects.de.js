@@ -75,7 +75,7 @@ export default {
     solution: 'Eine vollständige Verarbeitungskette: Sammeln → Normalisieren → Produktzuordnung → Validierung und Ausreißerfilter → Aggregation → Tageskennzahlen → Alarme. Das Leitprinzip ist eine „Beweiskette“: Jede Zahl im Dashboard lässt sich bis zum Rohangebot, zum Originaltitel und zum Quelllink zurückverfolgen. Fälle, bei denen das System unsicher ist, landen in einer Prüfwarteschlange, statt geraten zu werden.',
     build: [
       'Die Collector sind als Plug-ins gebaut. Ein generischer Collector ohne Shop-spezifischen Code liest aus jedem Standard-Shop Preis, Titel und Preise je Größe, mit Pausen zwischen den Anfragen und Obergrenzen.',
-      'Die Normalisierungs-Engine vereinheitlicht persische und englische Titel: Umwandlung arabischer Ziffern und Buchstaben, Extraktion von Marke, Typ, Farbe, Oberfläche sowie Menge und Einheit (auch zweiteiliger Einheiten).',
+      'Die Normalisierungs-Engine vereinheitlicht persische und englische Titel: Umwandlung arabischer Ziffern und Buchstaben, Extraktion von Marke, Typ, Spezifikationen sowie Menge und Einheit (auch zweiteiliger Einheiten).',
       'Eine regelbasierte und unscharfe Matching-Engine ordnet jedes Angebot seinem Produkt zu und teilt die Ergebnisse in „sicher“, „wahrscheinlich“ und „zu prüfen“. Nur sichere Treffer fließen in den Marktmedian ein.',
       'Ausreißer werden mit statistischen Verfahren (IQR und MAD) erkannt, und für jede Quelle wird ein Datenqualitätswert berechnet.',
       'Tageskennzahlen (Median, Minimum, Maximum, Stichprobengröße) und die Preisposition der Marke gegenüber dem Markt werden berechnet und als Preisverlauf dargestellt. Gleichwertige Produkte lassen sich auch manuell verknüpfen.',

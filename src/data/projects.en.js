@@ -75,7 +75,7 @@ export default {
     solution: 'A complete pipeline: collect → normalise → match products → validate and remove outliers → aggregate → daily indicators → alerts. The core design principle is a “chain of evidence”: every number on the dashboard can be traced back to the raw listing, its original title and the source link. When the system isn’t sure about something, it sends it to a human review queue instead of guessing.',
     build: [
       'Collectors are plugins. One generic collector, with no site-specific code, reads prices, titles and per-size prices from any standard store, while respecting request spacing and limits.',
-      'The normalisation engine cleans up Persian and English titles: converting Arabic digits and letters, and extracting brand, type, colour, finish, quantity and unit (even two-word units).',
+      'The normalisation engine cleans up Persian and English titles: converting Arabic digits and letters, and extracting brand, type, specifications, quantity and unit (even two-word units).',
       'A rule-based and fuzzy matching engine links each listing to its equivalent product and sorts results into “certain”, “probable” and “needs review”. Only certain matches count toward the market median.',
       'Outliers are detected with statistical methods (IQR and MAD), and each source gets a data-quality score.',
       'Daily indicators (median, min, max, sample count) and the brand’s price position against the market are calculated and shown on price-trend charts. Users can also link equivalent products by hand.',
