@@ -30,8 +30,8 @@ export const projects = [
     category: 'software',
     name: 'Rangnama',
     featured: true,
-    cover: img('rangnama-1'),
-    gallery: [img('rangnama-2')],
+    cover: img('rangnama-1-v2'),
+    gallery: [img('rangnama-2-v2')],
     tech: ['Python', 'FastAPI', 'PyTorch', 'Mask2Former', 'SAM', 'OpenCV', 'JavaScript', 'Docker'],
   },
   {
@@ -39,8 +39,8 @@ export const projects = [
     category: 'dashboard',
     name: 'Market Intelligence Platform',
     featured: true,
-    cover: img('market-radar-1'),
-    gallery: ['market-radar-2', 'market-radar-3', 'market-radar-4', 'market-radar-5', 'market-radar-6'].map(img),
+    cover: img('market-radar-1-v2'),
+    gallery: ['market-radar-2-v2', 'market-radar-3', 'market-radar-4', 'market-radar-5', 'market-radar-6-v2'].map(img),
     tech: ['Django', 'DRF', 'PostgreSQL', 'Celery', 'Redis', 'React', 'TypeScript', 'Docker'],
   },
   {
