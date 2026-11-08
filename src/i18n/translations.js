@@ -33,7 +33,7 @@ export const translations = {
       badge: 'پذیرای پروژه و همکاری تازه',
       hello: 'سلام، من',
       roles: ['برنامه‌نویس بک‌اند', 'متخصص SQL Server', 'برنامه‌نویس پایتون و جنگو', 'سازنده‌ی سامانه‌های سازمانی'],
-      intro: 'توسعه‌دهنده‌ی بک‌اند با بیش از پنج سال سابقه در طراحی و توسعه‌ی نرم‌افزارهای سازمانی. تخصص من پایگاه داده، پایتون و جنگو است.',
+      intro: 'توسعه‌دهنده‌ی بک‌اند با بیش از پنج سال سابقه در طراحی و توسعه‌ی نرم‌افزارهای سازمانی. تخصص من پایگاه داده و توسعه‌ی بک‌اند است.',
       ctaWork: 'نمونه‌کارها را ببینید',
       ctaTalk: 'تماس با من',
       ctaCv: 'دانلود رزومه',
@@ -117,7 +117,7 @@ export const translations = {
       lead: 'برنامه‌نویس بک‌اند، عاشق دیتابیس، ساکن تهران.',
       story: [
         'برنامه‌نویسی را از هنرستان شروع کردم و بعد کاردانی نرم‌افزار را در آموزشکده‌ی فنی امام صادق گرفتم. بعد از سربازی، دو سال تقریباً تمام وقتم را گذاشتم روی SQL Server و پایتون؛ بیش از ۳۵۰ ساعت دوره، و کنارش پروژه‌های شخصی.',
-        'از مرداد ۱۴۰۱ در یک مجموعه تولیدی فعالیت می‌کنم. در این مدت، تجربه ارزشمندی در زمینه تحلیل نیازها، توسعه و پیاده‌سازی راهکارهای نرم‌افزاری و بهبود فرآیندهای کاری در یک محیط سازمانی به دست آورده‌ام. این تجربه به من آموخته است که توسعه نرم‌افزار موفق، پیش از هر چیز با شناخت دقیق نیاز کارب��ان، درک چالش‌های واقعی و شنیدن دیدگاه افرادی آغاز می‌شود که در عمل با راهکارها سروکار دارند.',
+        'از مرداد ۱۴۰۱ در یک مجموعه تولیدی فعالیت می‌کنم. در این مدت، تجربه ارزشمندی در زمینه تحلیل نیازها، توسعه و پیاده‌سازی راهکارهای نرم‌افزاری و بهبود فرآیندهای کاری در یک محیط سازمانی به دست آورده‌ام. این تجربه به من آموخته است که توسعه نرم‌افزار موفق، پیش از هر چیز با شناخت دقیق نیاز کاربران، درک چالش‌های واقعی و شنیدن دیدگاه افرادی آغاز می‌شود که در عمل با راهکارها سروکار دارند.',
         'سال ۱۴۰۵ هوشیوا را راه انداختم؛ یک استودیوی کوچک که برای کسب‌وکارها نرم‌افزار اختصاصی می‌سازد. هم‌زمان کارشناسی را هم شروع کرده‌ام و آلمانی یاد می‌گیرم.',
       ],
       facts: {
@@ -164,7 +164,7 @@ export const translations = {
       downloadDe: 'PDF آلمانی',
       print: 'چاپ این صفحه',
       profile: 'خلاصه',
-      profileText: 'توسعه‌دهنده‌ی بک‌اند با بیش از پنج سال سابقه‌ی ساخت نرم‌افزار سازمانی برای یک واحد تولیدی. تمرکز بر پایتون/جنگو، APIهای REST و Microsoft SQL Server.',
+      profileText: 'توسعه‌دهنده‌ی بک‌اند با بیش از پنج سال سابقه‌ی ساخت نرم‌افزار سازمانی برای یک واحد تولیدی. تمرکز بر پایتون، جنگو و APIهای REST.',
       experience: 'سابقه‌ی کاری',
       education: 'تحصیلات',
       projects: 'پروژه‌های منتخب',
@@ -244,7 +244,7 @@ export const translations = {
       badge: 'Open to backend roles in Germany',
       hello: 'Hi, I’m',
       roles: ['Backend developer', 'SQL Server specialist', 'Python & Django engineer', 'Builder of business systems'],
-      intro: 'Backend developer with 5+ years of experience designing and building enterprise software. I specialise in Python and Django, SQL Server database design and performance tuning, and software architecture.',
+      intro: 'Backend developer with 5+ years of experience designing and building enterprise software. I specialise in Python, Django, and SQL Server.',
       ctaWork: 'See my work',
       ctaTalk: 'Get in touch',
       ctaCv: 'Download CV',
@@ -255,7 +255,7 @@ export const translations = {
 
     statement: {
       tag: 'In short',
-      text: 'I build stable, scalable enterprise software, from data modelling and database tuning to clean, well-designed APIs. Alongside that, I bring AI into the product itself: assistants built around real business data and workflows.',
+      text: 'I build stable, scalable enterprise software, from data modelling and database tuning to clean, well-designed APIs. Alongside that, I bring AI into the product itself.',
       more: 'More about me',
     },
 
@@ -327,8 +327,8 @@ export const translations = {
       title: 'Erfan Mohammadi',
       lead: 'Backend developer, database nerd, based in Tehran.',
       story: [
-        'I started programming at a technical high school, then earned a two-year degree in computer software at Imam Sadegh Technical College. After military service I spent two years almost entirely focused on SQL Server and Python: more than 350 hours of courses, alongside personal projects.',
-        'Since July 2022 I’ve worked as a developer at a manufacturing company. Pretty much every department you can think of, from the warehouse and sales to calibration and quality control, runs on software I designed and built. I learned to listen to the person using the system before writing code.',
+        'I started programming at a technical high school, then earned a two-year degree in computer software at Imam Sadegh Technical College. After military service I spent two years almost entirely on SQL Server and Python: more than 350 hours of courses, alongside personal projects.',
+        'Since July 2022 I’ve worked as a developer at a manufacturing company. Pretty much every department you can think of, from the warehouse and sales to calibration and quality control, runs on software I’ve built or maintain.',
         'In 2026 I started Houshiva, a small studio that builds custom software for businesses. I’ve also started a bachelor’s degree alongside work, and I’m learning German because I’d like my next chapter to be in Germany.',
       ],
       facts: {
@@ -455,7 +455,7 @@ export const translations = {
       badge: 'Offen für Backend-Stellen in Deutschland',
       hello: 'Hallo, ich bin',
       roles: ['Backend-Entwickler', 'SQL-Server-Spezialist', 'Python- & Django-Entwickler', 'Entwickler von Unternehmenssoftware'],
-      intro: 'Backend-Entwickler mit über 5 Jahren Erfahrung in Konzeption und Entwicklung von Unternehmenssoftware. Meine Schwerpunkte: Python und Django, Design und Performance-Tuning von SQL-Server-Datenbanken sowie Softwarearchitektur.',
+      intro: 'Backend-Entwickler mit über 5 Jahren Erfahrung in Konzeption und Entwicklung von Unternehmenssoftware. Meine Schwerpunkte: Python und Django, Design und Performance-Tuning von SQL Server.',
       ctaWork: 'Projekte ansehen',
       ctaTalk: 'Kontakt',
       ctaCv: 'Lebenslauf (PDF)',
@@ -466,7 +466,7 @@ export const translations = {
 
     statement: {
       tag: 'Kurz gesagt',
-      text: 'Ich entwickle stabile, skalierbare Unternehmenssoftware, von der Datenmodellierung und dem Datenbank-Tuning bis zu sauber entworfenen APIs. Dazu bringe ich KI direkt ins Produkt: Assistenten, die auf echten Unternehmensdaten und Arbeitsabläufen aufbauen.',
+      text: 'Ich entwickle stabile, skalierbare Unternehmenssoftware, von der Datenmodellierung und dem Datenbank-Tuning bis zu sauber entworfenen APIs. Dazu bringe ich KI direkt ins Produkt.',
       more: 'Mehr über mich',
     },
 
@@ -538,8 +538,8 @@ export const translations = {
       title: 'Erfan Mohammadi',
       lead: 'Backend-Entwickler, Datenbank-Fan, aus Teheran.',
       story: [
-        'Mit dem Programmieren habe ich an einer technischen Oberschule angefangen und danach einen zweijährigen Hochschulabschluss in Computer-Software an der Technischen Hochschule Imam Sadegh gemacht. Nach dem Militärdienst habe ich mich zwei Jahre lang fast ausschließlich auf SQL Server und Python konzentriert: über 350 Kursstunden und eigene Projekte.',
-        'Seit Juli 2022 arbeite ich als Entwickler in einem Industriebetrieb. So gut wie jede Abteilung, vom Lager und Vertrieb bis zur Kalibrierung und Qualitätskontrolle, läuft dort auf Software, die ich entworfen und umgesetzt habe. Dabei habe ich gelernt, zuerst den Menschen zuzuhören, die das System täglich nutzen, und erst dann zu programmieren.',
+        'Mit dem Programmieren habe ich an einer technischen Oberschule angefangen und danach einen zweijährigen Hochschulabschluss in Computer-Software an der Technischen Hochschule Imam Sadegh erworben. Nach dem Militärdienst habe ich mich zwei Jahre lang fast ausschließlich mit SQL Server und Python beschäftigt: über 350 Stunden Kurse und eigene Projekte.',
+        'Seit Juli 2022 arbeite ich als Entwickler in einem Industriebetrieb. So gut wie jede Abteilung, vom Lager und Vertrieb bis zur Kalibrierung und Qualitätskontrolle, läuft dort auf Software, die ich entwickelt habe oder betreue.',
         '2026 habe ich Houshiva gegründet, ein kleines Studio für individuelle Business-Software. Parallel habe ich ein Bachelorstudium begonnen und lerne Deutsch, weil ich mein nächstes Kapitel gern in Deutschland aufschlagen möchte.',
       ],
       facts: {
